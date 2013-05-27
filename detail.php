@@ -1,6 +1,7 @@
 
 <?php
   $name=$_GET["name"];
+  $thumbsrc=$_GET["thumbsrc"];
   $fat=floatVal($_GET["fat"]);
   $sugar=floatVal($_GET["sugar"]);
   $df=floatVal($_GET["df"]);
@@ -32,19 +33,33 @@
 	<div data-role="header">
 		<h1><?php echo $name;?></h1>
 	</div>
-
+	
 	<div data-role="content" >	
-		<table>
-		  <tr>
-		    <td><canvas id="canvas" height="150" width="150"></canvas></td>
-		    <td><ul>
-		        <li class="square fat"> <a class="nutrition">fat</a> </li>
-		        <li class="square sugar"> <a class="nutrition">sugar</a> </li>
-		        <li class="square df"> <a class="nutrition">df</a> </li>
-		        <li class="square carbon"> <a class="nutrition">carbohydrates</a> </li>
-		      </ul></td>
-		  </tr>
-		</table>
+		
+		
+		<div class="ui-grid-a">
+            <div class="ui-block-a">
+            	<?php echo '<img src="'.$thumbsrc.'" alt="Smiley face">'; ?>
+            </div>
+            <div class="ui-block-b">
+				<ul>
+						        <li> <a class="nutrition">fat</a> </li>
+						        <li> <a class="nutrition">sugar</a> </li>
+				</ul>
+            </div>
+			
+            <div class="ui-block-a">
+            	<canvas id="canvas" height="150" width="150"></canvas>
+            </div>
+            <div class="ui-block-b">
+				<ul>
+						        <li class="square fat"> <a class="nutrition">fat</a> </li>
+						        <li class="square sugar"> <a class="nutrition">sugar</a> </li>
+						        <li class="square df"> <a class="nutrition">df</a> </li>
+						        <li class="square carbon"> <a class="nutrition">carbohydrates</a> </li>
+				</ul>
+            </div>
+		</div>
 		<script>
 		    var doughnutData = [
 		    {

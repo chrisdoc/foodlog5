@@ -1,4 +1,5 @@
 var items=[];
+//var patt=/(?<=\()(.*?)(?=\))/;
 function searchDB(data) {
 	items=[];
 	var food = $('#searchField')
@@ -44,7 +45,15 @@ function searchDB(data) {
 					.text();
 				var df = dataxml.find("df_gram")
 					.text();
-				item={name:name,group:group,id:id,kcal:kcal,fat:fat,kh:kh,sugar:sugar,df:df};
+				var amount = dataxml.find("amount")
+						.text();
+						var unit = dataxml.find("amount_measuring_system")
+								.text();
+								first=unit.lastIndexOf("(")+1;
+								last=unit.indexOf(")");
+								unit=unit.substr(first,unit.length);
+								unit=unit.replace(/\)/g,"");
+				item={name:name,unit:unit,group:group,id:id,kcal:kcal,fat:fat,kh:kh,sugar:sugar,df:df,thumbsrc:thumbsrc,amount:amount};
 				items["id_"+id.toString()]=item;
 
 				$('#result-listview')
