@@ -1,30 +1,33 @@
+
 .square {
-  width: 10px;
-  height: 20px;
-  background: blue;
+	width: 10px;
+	height: 25px;
+	background: blue;
 }
-.square.fat{
-  background-color:#F7464A;
+.square.fat {
+	background-color: #F7464A;
 }
-.square.sugar{
-  background-color:#46BFBD;
+.square.sugar {
+	background-color: #46BFBD;
 }
-.square.df{
-  background-color:#FDB45C;
+.square.df {
+	background-color: #FDB45C;
 }
-.square.carbon{
-  background-color:#949FB1;
+.square.carbon {
+	background-color: #949FB1;
 }
-ul.nutrition{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
-li.nutrition{
- margin-top: 10px;
- font-size: 20;
- font-family: Arial, sans-serif;
+li {
+	margin-top: 10px;
+	font-size: 20;
+	font-family: Arial, sans-serif;
+ #text-shadow: 2px 0px 15px #292929;
 }
 a.nutrition {
-  margin-left: 20px;
+	margin-top:20px;
+	margin-left: 20px;
 }
