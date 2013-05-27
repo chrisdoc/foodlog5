@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>FoodLog</title> 
+	<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>-->
+	<!--<link href="http://code.jquery.com/mobile/latest/jquery.mobile.css" rel="stylesheet" type="text/css" />-->
+	 <link rel="stylesheet" type="text/css" href="jquery.mobile.flatui.css" />
+	<link rel="stylesheet" type="text/css" href="food.css" />
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/mobile/latest/jquery.mobile.js">
+	</script>
+	<script src="Chart.js"/>
+	</script>
+</head> 
+
+	
+<body> 
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="one">
+
+	<div data-role="header">
+		<h1>Fooddiary</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+		 <div class="ui-grid-a">
+            <div class="ui-block-a">
+            <a data-role="button" data-icon="arrow-r" data-iconpos="right" id="btn_settings" href="#lookup">Lookup</a>
+            </div>
+            <div class="ui-block-b">
+            <a data-role="button" data-icon="arrow-r" data-iconpos="right" id="btn_history" href="#history">History</a>
+            </div>
+            <div class="ui-block-a">
+            <a data-role="button" data-icon="arrow-r" data-iconpos="right" id="btn_settings" href="settings.html">Settings</a>
+            </div>
+            <div class="ui-block-b">
+            <a data-role="button" data-icon="arrow-r" data-iconpos="right" id="btn_help" href="#help">Help</a>
+            </div>
+        </div>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="d">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+<div data-role="page" id="help">
+
+	<div data-role="header">
+		<h1>Fooddiary</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+		 <div class="ui-grid-a">
+            <div class="ui-block-a">
+            <img  width="120" height="120" src="images/search.png">
+            </div>
+            <div class="ui-block-b">
+			<p>Use the search function to look up the food database for products by textual search</p>
+            </div>
+            <div class="ui-block-a">
+            <img width="120" height="120" src="images/history.png">
+            </div>
+            <div class="ui-block-b">
+            	<p>heck out the history to see how your calorie consumption is developing. Get detailed information about the meals you consumed.</p>
+            </div>
+            <div class="ui-block-a">
+            <img width="120" height="120" src="images/settings.png">
+            </div>
+             <div class="ui-block-b">
+             	<p>Enter you personal information to use the calculated basal metabolic rate as daily calorie limit</p>
+            </div>
+           
+        </div>
+	</div><!-- /content -->
+	
+	
+</div><!-- /page one -->
+
+</body>
+</html>

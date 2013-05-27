@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<result>
+<item>
+<id>20</id>
+<markedfordeletion>0</markedfordeletion>
+<thumbsrc><![CDATA[http://fddb.info/static/db/400/230/ADHU9NNW89765ZCIUEM68BIV_205x136.jpg]]></thumbsrc>
+<foodrank>7.3733</foodrank>
+<ratings_num>48</ratings_num>
+<ratings_avg_perc>80</ratings_avg_perc>
+<producerid>1</producerid>
+<groupid>145</groupid>
+<productcode_ean><![CDATA[]]></productcode_ean>
+<datasource>1</datasource>
+<data>
+<amount>100</amount>
+<amount_measuring_system><![CDATA[Mass (gram)]]></amount_measuring_system>
+<aggregate_state><![CDATA[solid]]></aggregate_state>
+<kj>297</kj>
+<kcal>71</kcal>
+<fat_gram>0.3</fat_gram>
+<kh_gram>15.6</kh_gram>
+<sugar_gram>15.4</sugar_gram>
+<protein_gram>0.7</protein_gram>
+<df_gram>1.5</df_gram>
+<water_gram>81.3</water_gram>
+<alcohol_gram>0</alcohol_gram>
+<v_a_mg>0.00</v_a_mg>
+<v_b1_mg>0.04</v_b1_mg>
+<v_b2_mg>0.03</v_b2_mg>
+<v_b6_mg>0.07</v_b6_mg>
+<v_b12_mg>0.000000</v_b12_mg>
+<v_c_mg>4.00</v_c_mg>
+<v_d_mg>0.000000</v_d_mg>
+<v_e_mg>0.67</v_e_mg>
+<m_eisen_mg>0.5000</m_eisen_mg>
+<m_calcium_mg>18.00</m_calcium_mg>
+<m_magnesium_mg>9.00</m_magnesium_mg>
+<m_natrium_mg>2.00</m_natrium_mg>
+<m_zink_mg>0.06</m_zink_mg>
+<m_kupfer_mg>0.083000</m_kupfer_mg>
+<m_schwefel_mg>8</m_schwefel_mg>
+<m_mangan_mg>0.104</m_mangan_mg>
+<m_chlor_mg>2.00</m_chlor_mg>
+<m_fluor_mg>0.014</m_fluor_mg>
+<m_kalium_mg>190.0</m_kalium_mg>
+<m_phosphor_mg>20</m_phosphor_mg>
+</data>
+<servings>
+<serving>
+<serving_id>178</serving_id>
+<name><![CDATA[1 St&uuml;ck]]></name>
+<weight_gram>4</weight_gram>
+</serving>
+<serving>
+<serving_id>183</serving_id>
+<name><![CDATA[10 St&uuml;ck]]></name>
+<weight_gram>40</weight_gram>
+</serving>
+<serving>
+<serving_id>2682</serving_id>
+<name><![CDATA[100 g]]></name>
+<weight_gram>100</weight_gram>
+</serving>
+</servings>
+<content>
+<celement>
+<ctype>1</ctype>
+<content><![CDATA[Weintrauben sind reich an Vitaminen und Mineralstoffen. Es existieren mehrere tausend Sorten die sich auch in der Farbe der Frucht (z.B. Grün, gelb, rot oder dunkelblau) unterscheiden.]]></content>
+</celement>
+<celement>
+<ctype>4</ctype>
+<content><![CDATA[super lecker!]]></content>
+</celement>
+<celement>
+<ctype>4</ctype>
+<content><![CDATA[Weintrauben sättigen sehr! Gerade bei Großhunger! Zudem ist Obst Gesund und bringt Energie!]]></content>
+</celement>
+<celement>
+<ctype>4</ctype>
+<content><![CDATA[Trauben sind im Vergleich zu anderen Obstsorten eine ware Kalorienbombe. Aber auch sehr lecker, wenn sie süß sind.]]></content>
+</celement>
+<celement>
+<ctype>4</ctype>
+<content><![CDATA[habe mich richtig erschrocken, dass die Dinger &quot;so&quot; viele kcal haben (im Gegensatz zu anderem Obst) - ich liebe sie trotzdem!]]></content>
+</celement>
+<celement>
+<ctype>4</ctype>
+<content><![CDATA[Weintrauben haben einen hohen Kaliumgehalt. Also gerade für Menschen, die stark schwitzen z.B. durch Sport ein guter Kaliumbringer.]]></content>
+</celement>
+<celement>
+<ctype>4</ctype>
+<content><![CDATA[Schmecken gut. Haben aber viel Zucker...leider
+Deswegen sollte man sie nicht so oft essen]]></content>
+</celement>
+<celement>
+<ctype>4</ctype>
+<content><![CDATA[Trauben sind vor allem f&uuml;r den kleinen Hunger zwischen durch sehr gut geeignet, da sie, &auml;hnlich wie Chips zum einfachen Fingerfood geh&ouml;ren, aber deutlich ges&uuml;nder sind und deutlich weniger Kalorien haben.]]></content>
+</celement>
+<celement>
+<ctype>4</ctype>
+<content><![CDATA[super als kalorienarmer nachmittags-snack geeignet! einfach lecker.....]]></content>
+</celement>
+<celement>
+<ctype>4</ctype>
+<content><![CDATA[Mhhhhhhh einfach lecker = wenns nich als Fingerfood ist, dann in einer Portion Joghurt! Ich bin immer froh &uuml;ber die Sorte ohne Kerne.]]></content>
+</celement>
+</content>
+<description>
+<name><![CDATA[Weintrauben]]></name>
+<option><![CDATA[weiß, frisch]]></option>
+<producer><![CDATA[Naturprodukt]]></producer>
+<group><![CDATA[Frischobst]]></group>
+<imagedescription><![CDATA[Weintrauben, weiß, frisch (maeuseturm)]]></imagedescription>
+</description>
+</item>
+</result>

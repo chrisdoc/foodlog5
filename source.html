@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Liveweave</title>
+
+<!-- Place cursor after this and select a
+  JavaScript library from the menu above -->
+<script src="Chart.js"></script>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+<!-- Supports context-sensitive CSS3 auto-completion -->
+<!-- Style starts here. Try adding new CSS tags. -->
+<style type="text/css">
+body {
+	padding: 1em;
+}
+h1 {
+	font-size: 120px;
+	margin-top: 0;
+	font-family: Arial, sans-serif;
+	text-shadow: 2px 0px 15px #292929;
+	letter-spacing: -7px;
+	text-decoration: none;
+	color: #DDDDDD;
+}
+.square {
+	width: 10px;
+	height: 25px;
+	background: blue;
+}
+.square.fat {
+	background-color: #F7464A;
+}
+.square.sugar {
+	background-color: #46BFBD;
+}
+.square.df {
+	background-color: #FDB45C;
+}
+.square.carbon {
+	background-color: #949FB1;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	margin-top: 10px;
+	font-size: 20;
+	font-family: Arial, sans-serif;
+ #text-shadow: 2px 0px 15px #292929;
+}
+a.nutrition {
+	margin-top:20px;
+	margin-left: 20px;
+}
+</style>
+<!-- Style ends here -->
+
+</head>
+
+<body>
+<!-- Supports context-sensitive HTML5 auto-completion --> 
+<!-- HTML starts here. Try adding new HTML tags. -->
+<table>
+  <tr>
+    <td><canvas id="canvas" height="150" width="150"></canvas></td>
+    <td><ul>
+        <li class="square fat"> <a class="nutrition">fat</a> </li>
+        <li class="square sugar"> <a class="nutrition">sugar</a> </li>
+        <li class="square df"> <a class="nutrition">df</a> </li>
+        <li class="square carbon"> <a class="nutrition">carbohydrates</a> </li>
+      </ul></td>
+  </tr>
+</table>
+<script>
+    var doughnutData = [
+    {
+      value: 30,
+      color:"#F7464A"
+    },
+    {
+      value : 50,
+      color : "#46BFBD"
+    },
+    {
+      value : 100,
+      color : "#FDB45C"
+    },
+    {
+      value : 40,
+      color : "#949FB1"
+    }
+
+    ];
+
+    var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+  
+  </script>
+</body>
+</html>

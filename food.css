@@ -1,0 +1,30 @@
+.square {
+  width: 10px;
+  height: 20px;
+  background: blue;
+}
+.square.fat{
+  background-color:#F7464A;
+}
+.square.sugar{
+  background-color:#46BFBD;
+}
+.square.df{
+  background-color:#FDB45C;
+}
+.square.carbon{
+  background-color:#949FB1;
+}
+ul.nutrition{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li.nutrition{
+ margin-top: 10px;
+ font-size: 20;
+ font-family: Arial, sans-serif;
+}
+a.nutrition {
+  margin-left: 20px;
+}
