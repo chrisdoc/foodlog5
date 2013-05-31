@@ -34,9 +34,15 @@ function searchDB(data) {
 				var id = $(this)
 					.find("id")
 					.text();
+				var contents=[];
+				var content=$(this).find("content").find("celement").each(function(){
+					contents.push($(this).find("content").text())
+				});	
+				var rank = $(this).find("foodrank").text();
 
 				var kcal = dataxml.find("kcal")
 					.text();
+				
 				var fat = dataxml.find("fat_gram")
 					.text();
 				var kh = dataxml.find("kh_gram")
@@ -53,7 +59,7 @@ function searchDB(data) {
 								last=unit.indexOf(")");
 								unit=unit.substr(first,unit.length);
 								unit=unit.replace(/\)/g,"");
-				item={name:name,unit:unit,group:group,id:id,kcal:kcal,fat:fat,kh:kh,sugar:sugar,df:df,thumbsrc:thumbsrc,amount:amount};
+				item={name:name,unit:unit,group:group,id:id,kcal:kcal,fat:fat,kh:kh,sugar:sugar,df:df,thumbsrc:thumbsrc,amount:amount,rank:rank,contents:contents.join("#")};
 				items["id_"+id.toString()]=item;
 
 				$('#result-listview')

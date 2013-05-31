@@ -7,6 +7,12 @@
   $df=floatVal($_GET["df"]);
   $kh=floatVal($_GET["kh"]);
   $kcal=floatVal($_GET["kcal"]);
+  $amount=$_GET["amount"];
+  $unit=$_GET["unit"];
+  $group=$_GET["group"];
+  $rank=floatVal($_GET["rank"]);
+  $contents=$_GET["contents"];
+  $content=explode("#", urldecode($contents));
 ?>
 
 
@@ -18,10 +24,19 @@
 	<title><?php echo $name;?></title> 
 	 <link rel="stylesheet" type="text/css" href="jquery.mobile.flatui.css" />
 	<link rel="stylesheet" type="text/css" href="food.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="style.css">
 	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script src="http://code.jquery.com/mobile/latest/jquery.mobile.js">
-	</script>
+	 <script src="jquery.raty.min.js"></script>
+	 <script src="http://code.jquery.com/mobile/latest/jquery.mobile.js"></script>
+	 <script type="text/javascript" src="jquery.quovolver.js"></script>
 	<script src="Chart.js"/></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		
+			$('blockquote').quovolver();
+		
+		});
+		</script>
 </head> 
 
 	
@@ -39,12 +54,14 @@
 		
 		<div class="ui-grid-a">
             <div class="ui-block-a">
-            	<?php echo '<img src="'.$thumbsrc.'" alt="Smiley face">'; ?>
+            	<?php echo '<img class="foodimg" src="'.$thumbsrc.'" alt="Smiley face">'; ?>
             </div>
             <div class="ui-block-b">
-				<ul>
-						        <li> <a class="nutrition">fat</a> </li>
-						        <li> <a class="nutrition">sugar</a> </li>
+				<ul  style="margin-left:20px;">
+						        <li> <div class="textlarge"><?php echo $name;?></div> </li>
+								<li></li>
+						        <li> <div class="textmiddle"><?php echo $group;?></div> </li>
+								 <li> <div class="textmiddle"><?php echo $amount." ".$unit." has ".$kcal." kCal";?></div> </li>
 				</ul>
             </div>
 			
@@ -59,7 +76,22 @@
 						        <li class="square carbon"> <a class="nutrition">carbohydrates</a> </li>
 				</ul>
             </div>
+	        <div class="ui-block-a">
+				<div class="textmiddle">User rating: </div>
+	        </div>
+	        <div class="ui-block-b">
+	        	<div id="star"></div>
+	        </div>
 		</div>
+		
+		<div>
+			
+			
+			
+		</div>
+        
+        
+		
 		<script>
 		    var doughnutData = [
 		    {
@@ -82,9 +114,23 @@
 		    ];
 
 		    var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
-  
+  		  $('#star').raty({ readOnly: true,score: <?php echo $rank/2.0;?>, });
 		  </script>
-	
+		  <?php
+		 
+		  $quote="<blockquote>
+			  			<p>%s</p>
+			  			
+			  		</blockquote>";
+		  foreach ($content as &$c) {
+			  
+			 
+		      echo sprintf($quote,$c);
+		  }
+		  // $arr is now array(2, 4, 6, 8)
+		  unset($c);
+		  
+		  ?>
 	</div><!-- /content -->
 </div><!-- /page one -->
 
