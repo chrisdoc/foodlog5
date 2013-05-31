@@ -1,4 +1,8 @@
 var items=[];
+var foodDB = TAFFY();
+var mealDB=TAFFY();
+foodDB.store("fooditems");
+mealDB.store("mealitems");
 //var patt=/(?<=\()(.*?)(?=\))/;
 function searchDB(data) {
 	items=[];
@@ -59,9 +63,14 @@ function searchDB(data) {
 								last=unit.indexOf(")");
 								unit=unit.substr(first,unit.length);
 								unit=unit.replace(/\)/g,"");
-				item={name:name,unit:unit,group:group,id:id,kcal:kcal,fat:fat,kh:kh,sugar:sugar,df:df,thumbsrc:thumbsrc,amount:amount,rank:rank,contents:contents.join("#")};
+				item={id:id,name:name,unit:unit,group:group,kcal:kcal,fat:fat,kh:kh,sugar:sugar,df:df,thumbsrc:thumbsrc,amount:amount,rank:rank,contents:contents.join("#")};
 				items["id_"+id.toString()]=item;
-
+				
+				
+				var count=foodDB({"id":parseInt(id)}).count();
+				if(count==0){
+					foodDB.merge('[{"id":'+parseInt(id)+',"name":"'+name+'","unit":"'+unit+'","grouo":"'+group+'","kcal":"'+kcal+'","fat":"'+fat+'","kh":"'+kh+'","sugar":"'+sugar+'","df":"'+df+'","thumbsrc":"'+thumbsrc+'","amount":"'+amount+'","rank":"'+rank+'"}]');
+				}
 				$('#result-listview')
 					.append('<li>' + '<a href="" onclick="displayDetails('+id +');">' + '<img style="border-radius: 10px;" src="' + thumbsrc + '" class="ui-li-thumb">' + '<h3 class="ui-li-heading">' + $(this)
 					.find("description")
@@ -109,6 +118,8 @@ function searchDB(data) {
 			}
 
 			);
+			
+			
 			$('#result-listview')
 				.listview('refresh');
 			$.mobile.loading("hide");

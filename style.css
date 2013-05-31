@@ -12,7 +12,7 @@ a:hover { color: #ea9941; }
 #wrapper { width: 475px; margin: 0 auto; }
 #description { margin-bottom: 40px; padding-bottom: 10px; }
 h1, h2 { font-weight: normal; }
-h1 { font-family: Georgia, Times, serif; font-size: 42px; color: #1f1f1f; margin-left: -60px; }
+#h1 { font-family: Georgia, Times, serif; font-size: 42px; color: #1f1f1f; margin-left: -60px; }
 h2 { font-size: 12px; }
 #description p { margin-bottom: 10px; }
 #footer { font-size: 11px; line-height: 16px; }
