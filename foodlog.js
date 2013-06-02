@@ -6,6 +6,97 @@ mealDB.store("mealitems");
 localStorage.mealDBBackup=mealDB().stringify()	
 localStorage.foodDBBackup=foodDB().stringify()
 //var patt=/(?<=\()(.*?)(?=\))/;
+
+
+
+var dates=new Array();
+var date;
+
+function loadMealData(){
+    
+	$('#meal-listview').listview().listview('refresh');
+	mealDB(function () {
+	                var d=new Date(this.date);
+	                d.setHours(0,0,0,0);
+	                return (d-date===0)?true:false;
+	            }).each(function(record,recordnumber){
+	                var id=record["id"];
+	                var amount_eaten=record["amount"];
+	                var food=foodDB({id:id});
+	                var thumbsrc=food.select("thumbsrc")[0];
+	                var name=food.select("name")[0];
+	                var amount=food.select("amount")[0];
+	                var unit=food.select("unit")[0];
+	                var kCal=food.select("kcal")[0];
+	              	var total=kCal*amount_eaten/amount;
+					var date=new Date(record["date"]);
+					
+		            $('#meal-listview')
+		                .append('<li>'  +'<img style="border-radius: 10px;" src="' + thumbsrc + '" class="ui-li-thumb">' +                   '<h3                class="ui-li-heading">' 							+name+'</h3>' + '<p class="ui-li-desc">'+date.toLocaleTimeString()+' '+amount_eaten+' '+unit+', '+total+ ' kCal</p>'  + '</li>');
+						
+		        });
+				
+        
+    $('#meal-listview')
+        .listview('refresh');
+}
+
+
+function displayMealDetails(meal){
+    $.mobile.changePage( "mealDetail.php", {
+      type: "get",
+      data: {meal:meal,date:dates[meal]},
+      changeHash: true
+    });
+}
+
+function loadHistoryData(){
+    
+    
+    mealDB().order("date desc").each(function (record,recordnumber) {
+        var d=new Date(record["date"]);
+        d.setHours(0,0,0,0);
+        if (d in dates) {
+            
+        }
+        else{
+            dates[d]=d;
+            dates.push(d);
+        }
+        
+    });
+	var i=0;
+    dates.forEach(function(date){
+        var totalKCal=0;
+        var c=mealDB(function () {
+            var d=new Date(this.date);
+            d.setHours(0,0,0,0);
+            return (d-date===0)?true:false;
+        }).each(function(record,recordnumber){
+            var id=record["id"];
+            var amount_eaten=record["amount"];
+            var food=foodDB({id:id});
+            var thumbsrc=food.select("thumbsrc")[0];
+            var name=food.select("name")[0];
+            var amount=food.select("amount")[0];
+            var unit=food.select("unit")[0];
+            var kCal=food.select("kcal")[0];
+            totalKCal+=kCal*amount_eaten/amount;
+        
+        });
+        
+        console.log(totalKCal);
+        var dateString=date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear();
+        var jsonDate=date.toJSON();
+        $('#history-listview')
+            .append('<li>' + '<a href="" onclick="displayMealDetails('+i+');">'  +                   '<h3                class="ui-li-heading">' +dateString+'</h3>' + '<p class="ui-li-desc"> You have consumed ' +totalKCal+ ' kCal</p>' + '</a>' + '</li>');
+			i++;
+    });
+	$('history-listview').listview().listview('refresh');
+   /* $('#result-listview')
+        .listview('refresh');*/
+}
+
 function searchDB(data) {
 	items=[];
 	var food = $('#searchField')
@@ -121,10 +212,11 @@ function searchDB(data) {
 			}
 
 			);
+			$('#result-listview').listview().listview('refresh');
 			
 			
-			$('#result-listview')
-				.listview('refresh');
+			/*$('#result-listview')
+				.listview('refresh');*/
 			$.mobile.loading("hide");
 		},
 		fail: function() {

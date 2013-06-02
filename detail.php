@@ -131,14 +131,20 @@
 		
 	
   	 	var d = new Date();
-		$('#time').val(d.getUTCHours()+":"+d.getUTCMinutes());
+		$('#time').val(d.getHours()+":"+d.getUTCMinutes());
 		
 		
 		$("#add_meal").click(function() {
 			var amount = parseInt($('#amount').val());
 			var id=<?php echo $id;?>;
+			console.log($('#time').val())
+			var now=$('#time').val().split(":");
+			
+			d.setHours(now[0]);
+			d.setMinutes(now[1]);
+			console.log(d);
 			mealDB.insert({date:d.toJSON(),id:id,amount:amount});
-			alert(mealDB().count());
+			//(mealDB().count());
 		});
 		
 		$(document).delegate('#opendialog', 'click', function() {

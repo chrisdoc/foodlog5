@@ -31,48 +31,7 @@ $date=$_GET["date"];
     <script>
 
 
-    function displayMealDetails(date){
-        $.mobile.changePage( "mealDetail.php", {
-          type: "get",
-          data: date,
-          changeHash: true
-        });
-    }
-
-    function loadData(){
-        
-		var date=new Date(<?php echo '"'.$date.'"';?>);
-		mealDB(function () {
-		                var d=new Date(this.date);
-		                d.setHours(0,0,0,0);
-		                return (d-date===0)?true:false;
-		            }).each(function(record,recordnumber){
-		                var id=record["id"];
-		                var amount_eaten=record["amount"];
-		                var food=foodDB({id:id});
-		                var thumbsrc=food.select("thumbsrc")[0];
-		                var name=food.select("name")[0];
-		                var amount=food.select("amount")[0];
-		                var unit=food.select("unit")[0];
-		                var kCal=food.select("kcal")[0];
-		              	var total=kCal*amount_eaten/amount;
-			            $('#result-listview')
-			                .append('<li>'  +'<img style="border-radius: 10px;" src="' + thumbsrc + '" class="ui-li-thumb">' +                   '<h3                class="ui-li-heading">' 							+name+'</h3>' + '<p class="ui-li-desc">'+amount_eaten+' '+unit+', '+total+ ' kCal</p>'  + '</li>');
-							
-			        });
-		           
-		
-            
-        $('#result-listview')
-            .listview('refresh');
-    }
-    $(document).ready(function() {
-      loadData();
-	  var date=new Date(<?php echo '"'.$date.'"';?>);
-	  $("#title").html(date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear());
-	  document.title = 'Meals from '+date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear();
-	  
-    });
+    
 
     </script>
 </head>
@@ -84,11 +43,22 @@ $date=$_GET["date"];
         <div data-role="header">
             <h1 id="title"><?php echo $date;?></h1>
         </div>
+		
 
         <div data-role="content">
+			
             <ul class="listview" data-inset="true" data-role="listview"
-            data-theme="b" id="result-listview"></ul>
+            data-theme="b" id="meal-listview"></ul>
         </div><!-- /content -->
+		<script>
+		date=new Date(<?php echo '"'.$date.'"';?>);
+	    loadMealData();
+	  
+	  $("#title").html(date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear());
+	  document.title = 'Meals from '+date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear();
+		</script>
     </div><!-- /page one -->
+	
+   
 </body>
 </html>
