@@ -3,6 +3,8 @@ var foodDB = TAFFY();
 var mealDB=TAFFY();
 foodDB.store("fooditems");
 mealDB.store("mealitems");
+localStorage.mealDBBackup=mealDB().stringify()	
+localStorage.foodDBBackup=foodDB().stringify()
 //var patt=/(?<=\()(.*?)(?=\))/;
 function searchDB(data) {
 	items=[];
@@ -80,7 +82,7 @@ function searchDB(data) {
 
 
 
-				content = '<div data-role="page" id="id_' + id + '" data-url="id_' + id + '">' + '<div data-role="header">' + '<a href="#" data-rel="back" data-icon="back">Back</a>' + '<h1>' + name + '</h1>' + '</div>' + '<div data-role="content">' + '<p>' + '<div data-role="fieldcontain" class="result">' + '</div>' + '</p>' + 'fat: ' + fat + ' sugar: ' + sugar + ' df: ' + df + " kh" + kh + '<canvas id="canvas_' + id + '" height="150" width="150"></canvas>' + '</div>' + '</div>';
+				/*content = '<div data-role="page" id="id_' + id + '" data-url="id_' + id + '">' + '<div data-role="header">' + '<a href="#" data-rel="back" data-icon="back">Back</a>' + '<h1>' + name + '</h1>' + '</div>' + '<div data-role="content">' + '<p>' + '<div data-role="fieldcontain" class="result">' + '</div>' + '</p>' + 'fat: ' + fat + ' sugar: ' + sugar + ' df: ' + df + " kh" + kh + '<canvas id="canvas_' + id + '" height="150" width="150"></canvas>' + '</div>' + '</div>';
 
 
 
@@ -111,10 +113,11 @@ function searchDB(data) {
 					.getContext("2d"))
 					.Doughnut(doughnutData);
 
-				/*Tell JQM to enhance the page with the required classes.*/
+				
 				$(id)
 					.page();
 				//alert("result");
+				*/
 			}
 
 			);
