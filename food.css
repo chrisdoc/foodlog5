@@ -43,17 +43,15 @@ a.nutrition {
 	float:right;
 	margin-right:20px;
 }
-.ui-block-a canvas {
+/*.ui-block-a canvas {
 margin-right:20px;
 float:right;
-}
+}*/
 .ui-block-a .textmiddle {
 float:right;
 margin-right:20px;
 }
-.ui-grid-solo {
-margin:0 auto;width:100px;
-}
+
 
 .modal {
     background-color:#fff;
