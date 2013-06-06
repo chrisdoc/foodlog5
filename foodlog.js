@@ -249,3 +249,71 @@ function displayDetails(id){
 function changePage(id) {
 	$.mobile.changePage($(id), {transition : "slide"});
 }
+function initSettings(){
+		loadFromLocalStorage();
+  		$('#age').change(function() {
+		  updateKcal();
+		});
+		$('#gender').change(function() {
+		  updateKcal();
+		});
+		$('#height').change(function() {
+		  updateKcal();
+		});
+		$('#weight').change(function() {
+		  updateKcal();
+		});
+
+	      $( "#btn_save" )
+	      .button()
+	      .click(function( event ) {
+	        event.preventDefault();
+			//$('#settings_form').submit();
+			
+	        localStorage.age=$('#age').val();
+	        localStorage.height=$('#height').val();
+	        localStorage.weight=$('#weight').val();
+	        localStorage.gender=$('#gender').val();
+	        localStorage.daily_limit=$('#daily_limit').val();
+	        localStorage.meal_limit=$('#meal_limit').val();
+			
+			alert("Settings saved");
+
+	      });
+}
+loadFromLocalStorage=function(){
+	restore('age');
+	restore("height");
+	restore("weight");
+	restore("daily_limit");
+	restore("meal_limit");
+	if (localStorage.getItem("gender") != null) {
+		
+		var optionValue=localStorage.gender;
+		$("#gender").val(optionValue);
+	}
+	
+
+}
+restore=function(name){
+	if (localStorage.getItem(name) != null) {
+		$('#'+name).val(parseInt(localStorage.getItem(name)));
+	}
+}
+updateKcal=function(){
+    var weight=$('#weight').val();
+    var height=$('#height').val();
+    var age=$('#age').val();
+    var kcal=0;
+    if($('#gender').val()=="male"){
+		
+		kcal = 10 * weight + 6.25 * height - 5 * age + 5;
+    }
+    else if($('#gender').val()=="female"){
+    	
+    	kcal = 10 * weight + 6.25 * height - 5 * age - 161;
+    }
+    kcal=new Number(kcal)
+    $('#daily_limit').val(Math.round(kcal));
+  
+}
