@@ -67,7 +67,7 @@
             </div>
 			
             <div class="ui-block-a">
-            	<canvas id="canvas" height="150" width="150"></canvas>
+            	<canvas id="detail_canvas" height="150" width="150"></canvas>
             </div>
             <div class="ui-block-b">
 				<ul>
@@ -194,7 +194,7 @@
 		    ];
 
 		   
-			var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+			var myDoughnut = new Chart(document.getElementById("detail_canvas").getContext("2d")).Doughnut(doughnutData);
 	
   		$(document).bind('pageinit',function() {
       
