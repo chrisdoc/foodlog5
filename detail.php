@@ -194,13 +194,13 @@
 		    ];
 
 		   
-	
+			var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
 	
   		$(document).bind('pageinit',function() {
       
   				//$('blockquote').quovolver();
 				$('.quotes').quovolver();
-			    var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+			    
 	  		  	$('#star').raty({ readOnly: true,score: <?php echo $rank/2.0;?>, });
   			});
 		
