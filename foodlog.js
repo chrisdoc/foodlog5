@@ -176,6 +176,9 @@ function searchDB(data) {
 				var thumbsrc = $(this)
 					.find("thumbsrc")
 					.text();
+					if(!thumbsrc){
+						thumbsrc="images/afs.png";
+					}
 				var name = desc.find("name")
 					.text();
 				var group = desc.find("group")
@@ -222,53 +225,11 @@ function searchDB(data) {
 					.find("name")
 					.text() + '</h3>' + '<p class="ui-li-desc">' + group + '</p>' + '</a>' + '</li>');
 
-
-
-
-				/*content = '<div data-role="page" id="id_' + id + '" data-url="id_' + id + '">' + '<div data-role="header">' + '<a href="#" data-rel="back" data-icon="back">Back</a>' + '<h1>' + name + '</h1>' + '</div>' + '<div data-role="content">' + '<p>' + '<div data-role="fieldcontain" class="result">' + '</div>' + '</p>' + 'fat: ' + fat + ' sugar: ' + sugar + ' df: ' + df + " kh" + kh + '<canvas id="canvas_' + id + '" height="150" width="150"></canvas>' + '</div>' + '</div>';
-
-
-
-
-
-				$('body')
-					.append(content)
-					.trigger('create');
-
-
-				var doughnutData = [{
-					value: fat * 10,
-					color: "#F7464A"
-				}, {
-					value: sugar * 10,
-					color: "#46BFBD"
-				}, {
-					value: df * 10,
-					color: "#FDB45C"
-				}, {
-					value: kh * 10,
-					color: "#949FB1"
-				}
-
-				];
-
-				var myDoughnut = new Chart(document.getElementById("canvas_" + id)
-					.getContext("2d"))
-					.Doughnut(doughnutData);
-
-				
-				$(id)
-					.page();
-				//alert("result");
-				*/
 			}
 
 			);
 			$('#result-listview').listview().listview('refresh');
 			
-			
-			/*$('#result-listview')
-				.listview('refresh');*/
 			$.mobile.loading("hide");
 		},
 		fail: function() {

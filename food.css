@@ -36,10 +36,25 @@ a.nutrition {
 	margin-top:20px;
 	margin-left: 20px;
 }
+
 .ui-block-a img {
-    width  : 100%;
+    width  : 40%;
     height : auto;
+	float:right;
+	margin-right:20px;
 }
+.ui-block-a canvas {
+margin-right:20px;
+float:right;
+}
+.ui-block-a .textmiddle {
+float:right;
+margin-right:20px;
+}
+.ui-grid-solo {
+margin:0 auto;width:100px;
+}
+
 .modal {
     background-color:#fff;
     display:none;
@@ -62,4 +77,81 @@ a.nutrition {
     border-bottom:1px solid #333;
     font-size:20px;
   }
+  
+  .quovolve {
+          margin: 20px 0;
+      }
+      .quovolve blockquote {
+          margin: 0;
+      }
+      .quovolve blockquote p {
+          margin: 10px 0;
+      }
+      .quotes ul {
+          list-style: none;
+      }
+
+      /**
+       * General Navigation Styles
+       */
+      .quovolve-nav:before, .quovolve-nav:after {
+          content: "\0020"; display: block; height: 0; visibility: hidden;    
+      } 
+      .quovolve-nav:after { clear: both; }
+      .quovolve-nav {
+          margin: 20px 0;
+          line-height: 30px;
+          zoom: 1;
+      }
+      .quovolve-nav span {
+          float: left;
+          margin-right: 5px;
+      }
+      .quovolve-nav a {
+          background: #aaa;
+          line-height: 20px;
+          color: #fff;
+          display: block;
+          padding: 5px 15px;
+          border: 0 none;
+          text-align: center;
+          /* Border Radius */
+          -webkit-border-radius: 15px;
+          -moz-border-radius: 15px;
+          border-radius: 15px;
+          /* Box Shadow */
+          -moz-box-shadow: inset 0 1px 2px rgba(0,0,0, 0.15);
+          -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0, 0.15);
+          box-shadow: inset 0 1px 2px rgba(0,0,0, 0.15);
+      }
+      .quovolve-nav a:hover {
+          background: #dd390d;
+      }
+
+      /**
+       * Numbered Navigation
+       */
+      .nav-numbers {
+          list-style: none; margin: 0;
+          float: right;
+      }
+      .nav-numbers li {
+          float: left;
+          margin: 0 0 0 5px;
+      }
+      .nav-numbers li a {
+          padding-left: 0; padding-right: 0;
+          width: 30px;
+      }
+      .nav-numbers li.active a, .nav-numbers li a:hover {
+          background: #dd390d;
+      }
+
+      /**
+       * Navigation Description
+       */
+      .nav-text {
+          margin-left: 30px;
+          color: #aaa;
+      }
   

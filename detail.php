@@ -95,21 +95,24 @@
 	        <div class="ui-block-b">
 	        	<input id="time" name="time" type="time"/>
 	        </div>
+			
+			
 		</div>
 		
 		
 		
-		
-		<div>
-			 <button id="add_meal" rel="#">Add meal</button>
-				
-				
+		<div class="ui-grid-solo">
+			<div class="ui-block-a"><button type="v" data-theme="b" id="add_meal">Add meal</button></div>
 		</div>
-		<div>
+		
+		<div class="ui-grid-solo">
 			
-			
+			<div class="ui-block-a">
   		  <?php
-		 
+		  echo '
+		  <div class="panels">
+		                      <div class="panel" id="panel-1">
+								  <div class="quotes">';
   		  $quote="<blockquote>
   			  			<p>%s</p>
 			  			
@@ -119,11 +122,13 @@
 			 
   		      echo sprintf($quote,$c);
   		  }
+		  echo '</div> </div> </div>';
   		 
   		  unset($c);
 		  
   		  ?>
 		</div>
+			</div>
 
 		
 		
@@ -144,6 +149,7 @@
 			d.setMinutes(now[1]);
 			console.log(d);
 			mealDB.insert({date:d.toJSON(),id:id,amount:amount});
+			alert("meal has been added");
 			//(mealDB().count());
 		});
 		
@@ -187,10 +193,17 @@
 
 		    ];
 
-		    var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
-  		  $('#star').raty({ readOnly: true,score: <?php echo $rank/2.0;?>, });
+		   
 	
-		$('blockquote').quovolver();
+	
+  		$(document).bind('pageinit',function() {
+      
+  				//$('blockquote').quovolver();
+				$('.quotes').quovolver();
+			    var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+	  		  	$('#star').raty({ readOnly: true,score: <?php echo $rank/2.0;?>, });
+  			});
+		
 		  </script>
 		 
 		 
