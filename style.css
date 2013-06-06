@@ -5,7 +5,7 @@
  |	are labeled with this *required*
 */
 
-body { font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 18px; color: #373737; }
+/*body { font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 18px; color: #373737; }*/
 a { text-decoration: none; color: #52b7d4; }
 a:hover { color: #ea9941; }
 #header, #footer { padding: 20px 0; }

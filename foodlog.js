@@ -12,6 +12,49 @@ localStorage.foodDBBackup=foodDB().stringify()
 var dates=new Array();
 var date;
 
+
+function loadFoodData(id){
+	var item=foodDB({id:id}).first();
+	console.log("show item "+id);
+	$('#food_header').text(item.name);
+	$('#food_name').text(item.name);
+	$('#food_group').text(item.grouo);
+	var kcal_text=item.amount+" "+item.unit+" has "+item.kcal+" kcal";
+	$('#food_amount_unit').text(kcal_text);
+	
+	$("#food_img").attr("src", item.thumbsrc)
+	
+
+    var foodData = [
+    {
+      value: Number(item.fat),
+      color:"#F7464A"
+    },
+    {
+      value : Number(item.sugar),
+      color : "#46BFBD"
+    },
+    {
+      value : Number(item.df),
+      color : "#FDB45C"
+    },
+    {
+      value : Number(item.kh),
+      color : "#949FB1"
+    }
+
+    ];
+
+    
+	var canvas=document.getElementById("food_canvas");
+	if(canvas!=null){
+		var myDoughnut = new Chart(document.getElementById("food_canvas").getContext("2d")).Doughnut(foodData);
+	}
+  	$('#food_star').raty({ readOnly: true,score: item.rank/2.0});
+
+	//$('blockquote_food').quovolver();
+}
+
 function loadMealData(){
     
 	$('#meal-listview').listview().listview('refresh');
@@ -32,7 +75,7 @@ function loadMealData(){
 					var date=new Date(record["date"]);
 					
 		            $('#meal-listview')
-		                .append('<li>'  +'<img style="border-radius: 10px;" src="' + thumbsrc + '" class="ui-li-thumb">' +                   '<h3                class="ui-li-heading">' 							+name+'</h3>' + '<p class="ui-li-desc">'+date.toLocaleTimeString()+' '+amount_eaten+' '+unit+', '+total+ ' kCal</p>'  + '</li>');
+		                .append('<li>' +'<a href="" onclick="displayFoodDetails('+id+');">' +'<img style="border-radius: 10px;" src="' + thumbsrc + '" class="ui-li-thumb">' +                   '<h3                class="ui-li-heading">' 							+name+'</h3>' + '<p class="ui-li-desc">'+date.toLocaleTimeString()+' '+amount_eaten+' '+unit+', '+total+ ' kCal</p>'  + '</a></li>');
 						
 		        });
 				
@@ -49,6 +92,15 @@ function displayMealDetails(meal){
       changeHash: true
     });
 }
+
+function displayFoodDetails(id){
+    $.mobile.changePage( "foodDetail.php", {
+      type: "get",
+      data: {foodid:id},
+      changeHash: true
+    });
+}
+
 
 function loadHistoryData(){
     

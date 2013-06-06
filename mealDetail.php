@@ -3,12 +3,10 @@ $date=$_GET["date"];
 ?>
 <!DOCTYPE html> 
 <html>
-
 <head>
 
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-
     <title><?php echo $date;?></title>
     <link href="jquery.mobile.flatui.css" rel="stylesheet" type="text/css">
     <link href="food.css" rel="stylesheet" type="text/css">
@@ -29,9 +27,6 @@ $date=$_GET["date"];
     type="text/javascript"></script>
     <script src="Chart.js"></script>
     <script>
-
-
-    
 
     </script>
 </head>
