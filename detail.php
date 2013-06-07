@@ -113,10 +113,10 @@
 		  <div class="panels">
 		                      <div class="panel" id="panel-1">
 								  <div class="quotes">';
-  		  $quote="<blockquote>
-  			  			<p>%s</p>
-			  			
-  			  		</blockquote>";
+  		  $quote='<blockquote>
+  			  			%s
+		  <cite>Anonymous</cite>
+  			  		</blockquote>';
   		  foreach ($content as &$c) {
 			  
 			 
@@ -135,23 +135,7 @@
 		<script>
 		
 	
-  	 	var d = new Date();
-		$('#time').val(d.getHours()+":"+d.getUTCMinutes());
-		
-		
-		$("#add_meal").click(function() {
-			var amount = parseInt($('#amount').val());
-			var id=<?php echo $id;?>;
-			console.log($('#time').val())
-			var now=$('#time').val().split(":");
-			
-			d.setHours(now[0]);
-			d.setMinutes(now[1]);
-			console.log(d);
-			mealDB.insert({date:d.toJSON(),id:id,amount:amount});
-			alert("meal has been added");
-			//(mealDB().count());
-		});
+  
 		
 		$(document).delegate('#opendialog', 'click', function() {
 		  // NOTE: The selector is the hidden DIV element.
@@ -199,18 +183,57 @@
   		$(document).bind('pageinit',function() {
       
   				//$('blockquote').quovolver();
-				$('.quotes').quovolver();
+				$('.quotes').quovolver({
+					            transitionSpeed : 300,
+								autoPlaySpeed : 6000, 
+					            autoPlay        : true,
+					            equalHeight     : false
+					        });
 			    
 	  		  	$('#star').raty({ readOnly: true,score: <?php echo $rank/2.0;?>, });
+				initDetailPage();
   			});
-		
+			var currentItem={id:<?php echo $id;?>,kcal:<?php echo $kcal;?>};
 		  </script>
 		 
 		 
 	</div><!-- /content -->
 </div><!-- /page one -->
 
+<div data-role="popup" id="popup_option" 
+    data-theme="a" class="ui-corner-bottom ui-content" data-overlay-theme="a">
 
+     <div data-role="content">
+        <h3 class="ui-title">Are you sure?</h3>
+
+        <p id="limit_text">You have exceeded your limits the ticket.</p>
+
+	 <div class="ui-grid-a">
+           <div class="ui-block-a">
+               <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="d" data-corners="true" data-shadow="true" class="ui-btn ui-shadow 					ui-btn-corner-all ui-btn-up-d" id="closebtn">
+                   Cancel
+               </a>
+          
+           </div>
+           <div class="ui-block-b">
+               <a href="#" data-role="button" data-inline="true" data-rel="button" data-theme="b" data-corners="true" data-shadow="true" class="ui-btn ui-shadow 					ui-btn-corner-all ui-btn-up-b" id="okbtn">
+                   OK
+               </a>
+		
+          
+           </div>
+	   </div>
+
+       
+		
+	   <script>
+	$('#closebtn').closest('.ui-btn').hide();
+	$('#okbtn').closest('.ui-btn').hide();
+	   </script>
+
+      
+    </div>
+</div>
 
 </body>
 </html>
