@@ -37,10 +37,14 @@ a.nutrition {
 	margin-left: 20px;
 }
 
-.ui-block-a .foodimg img {
+.ui-block-a.foodimg img {
     width  : 100%;
     height : auto;
 	
+}
+.foodimg {
+    width  : 100%;
+    height : auto;
 }
 #redHero {
   border-bottom: 2px solid #FFFFFF;
@@ -86,7 +90,9 @@ float:right;
 margin-right:20px;
 }*/
 
-
+#buttoncontainer .ui-btn {
+    padding: 10px;
+}
 .modal {
     background-color:#fff;
     display:none;

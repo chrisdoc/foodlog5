@@ -21,8 +21,11 @@ function loadFoodData(id){
 	$('#food_group').text(item.grouo);
 	var kcal_text=item.amount+" "+item.unit+" has "+item.kcal+" kcal";
 	$('#food_amount_unit').text(kcal_text);
-	
-	$("#food_img").attr("src", item.thumbsrc)
+	var thumbsrc= item.thumbsrc;
+	if(!thumbsrc){
+		thumbsrc="images/afs.png";
+	}
+	$("#food_img").attr("src", thumbsrc)
 	
 
     var foodData = [
@@ -55,18 +58,22 @@ function loadFoodData(id){
 	//$('blockquote_food').quovolver();
 }
 
-function loadMealData(){
-    
+function loadMealData(mealDate){
+	$('#meal-listview')
+		.empty();
 	$('#meal-listview').listview().listview('refresh');
 	mealDB(function () {
 	                var d=new Date(this.date);
 	                d.setHours(0,0,0,0);
-	                return (d-date===0)?true:false;
+	                return (d-mealDate===0)?true:false;
 	            }).each(function(record,recordnumber){
 	                var id=record["id"];
 	                var amount_eaten=record["amount"];
 	                var food=foodDB({id:id});
 	                var thumbsrc=food.select("thumbsrc")[0];
+					if(!thumbsrc){
+						thumbsrc="images/afs.png";
+					}
 	                var name=food.select("name")[0];
 	                var amount=food.select("amount")[0];
 	                var unit=food.select("unit")[0];
@@ -88,9 +95,10 @@ function loadMealData(){
 function displayMealDetails(meal){
     $.mobile.changePage( "mealDetail.php", {
       type: "get",
-      data: {meal:meal,date:dates[meal]},
+      data: {meal:meal,date:dates[meal].getTime()},
       changeHash: true
     });
+   
 }
 
 function displayFoodDetails(id){
@@ -103,6 +111,8 @@ function displayFoodDetails(id){
 
 
 function loadHistoryData(){
+	$('#history-listview')
+		.empty();
     mealDB().order("date desc").each(function (record,recordnumber) {
         var d=new Date(record["date"]);
         d.setHours(0,0,0,0);
@@ -127,6 +137,9 @@ function loadHistoryData(){
             var amount_eaten=record["amount"];
             var food=foodDB({id:id});
             var thumbsrc=food.select("thumbsrc")[0];
+			if(!thumbsrc){
+				thumbsrc="images/afs.png";
+			}
             var name=food.select("name")[0];
             var amount=food.select("amount")[0];
             var unit=food.select("unit")[0];
@@ -345,7 +358,21 @@ updateKcal=function(){
 
 function initDetailPage(){
  	var d = new Date();
-	$('#time').val(d.getHours()+":"+d.getUTCMinutes());
+	var ds=d.getHours()+":"+d.getUTCMinutes();
+	if(d.getUTCMinutes()<10){
+		var ds=d.getHours()+":0"+d.getUTCMinutes();
+	}
+	
+	
+	console.log("timestring: "+ds);
+	$('#time').val(ds);
+	
+	$('#popup_option').popup( );
+	$("#popupAdded").popup();
+    setTimeout(function () {
+	//	$('#popup_option').popup();
+	//	$("#popupAdded").popup();
+       }, 300);
 	$("#add_meal").click(function() {
 		var amount = parseInt($('#amount').val());
 		//var id=<?php echo $id;?>;
@@ -356,31 +383,38 @@ function initDetailPage(){
 		d.setHours(now[0]);
 		d.setMinutes(now[1]);
 		console.log(d);
-		//var kcal=amount/<?php echo $amount;?>*<?php echo $kcal;?>;
+		var kcal=amount/currentItem.amount*currentItem.kcal;
 		var todaysKcal=calculateTodaysKcal();
+		
 		if(todaysKcal+kcal>=localStorage.daily_limit){
-			$('#popup_option').popup( );
-								$('#limit_text').text("You have exceeded your meal limit do you wanna continue");
+			
+								$('#limit_text').text("You have exceeded your daily limit, do you wanna continue?");
 								$('#closebtn').closest('.ui-btn').show();
 								$('#okbtn').closest('.ui-btn').show();
 								$('#okbtn').click(function(){
 									console.log({date:d.toJSON(),id:id,amount:amount})
-									//mealDB.insert({date:d.toJSON(),id:id,amount:amount});
+									mealDB.insert({date:d.toJSON(),id:id,amount:amount});
 									$( '#popup_option' ).popup( 'close', { transition: "flow" } );
 								});
 			                    $( '#popup_option' ).popup( 'open', { transition: "flow" } );
 		}
-		if(kcal>=localStorage.meal_limit){
-			$('#popup_option').popup( );
-								$('#limit_text').text("You have exceeded your meal limit do you wanna continue");
+		else if(kcal>=localStorage.meal_limit){
+
+								$('#limit_text').text("You have exceeded your meal limit, do you wanna continue?");
 								$('#closebtn').closest('.ui-btn').show();
 								$('#okbtn').closest('.ui-btn').show();
 								$('#okbtn').click(function(){
 									console.log({date:d.toJSON(),id:id,amount:amount})
-									//mealDB.insert({date:d.toJSON(),id:id,amount:amount});
+									mealDB.insert({date:d.toJSON(),id:id,amount:amount});
 									$( '#popup_option' ).popup( 'close', { transition: "flow" } );
 								});
 			                    $( '#popup_option' ).popup( 'open', { transition: "flow" } );
+		}
+		else{
+			mealDB.insert({date:d.toJSON(),id:id,amount:amount});
+			$("#popupAdded").popup("open");
+			window.setTimeout(function() {$('#popupAdded').popup("close")}, 1000);
+			
 		}
 				
 	});

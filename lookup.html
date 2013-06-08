@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
 	<title>Lookup</title> 
 	<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
@@ -27,7 +27,7 @@
 <body> 
 
 <!-- Start of first page: #one -->
-<div data-role="page" id="one">
+<div data-role="page" id="lookup">
 
 	<div data-role="header">
 		<h1>Lookup</h1>
@@ -41,7 +41,7 @@
 				<table style='width:100%'>
 					<tr>
 						<td>
-							<input type="search" placeholder="Apple" id="searchField"/>
+							<input type="search" placeholder="Apple" id="searchField" value="Apfel"/>
 						</td>
 						<td style='font-size:80%; width:7em'>
 							<a href="#" data-role="button" onclick="searchDB();">
@@ -50,6 +50,19 @@
 						</td>
 					</tr>
 				</table>
+				<script>
+				//searchDB();
+				$("#searchField").bind("keypress", {}, keypressInBox);
+
+				function keypressInBox(e) {
+				    var code = (e.keyCode ? e.keyCode : e.which);
+				    if (code == 13) { //Enter keycode                        
+				        e.preventDefault();
+
+				        searchDB();
+				    }
+				};
+				</script>
 			</div>
 			
 			<ul id="result-listview" class="listview" data-role="listview" data-theme="b" data-inset="true">

@@ -21,30 +21,28 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
 	<title><?php echo $name;?></title> 
-	 <link rel="stylesheet" type="text/css" href="jquery.mobile.flatui.css" />
-	<link rel="stylesheet" type="text/css" href="food.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="style.css">
-	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.css" /> 
-	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	 <script src="jquery.raty.min.js"></script>
-	 <script src="http://code.jquery.com/mobile/latest/jquery.mobile.js"></script>
-	 <script type="text/javascript" src="taffy.js"></script>
-	 <script type="text/javascript" src="foodlog.js"></script>
-	 <script type="text/javascript" src="taffy.extend.group.js"></script>
-	 <script type="text/javascript" src="jquery.quovolver.js"></script>
-	 <script type="text/javascript" src="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog2.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="jquery.mobile.flatui.css" />
+<link rel="stylesheet" type="text/css" href="food.css" />
+<link rel="stylesheet" href="messi.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+<script type="text/javascript" language="javascript" src="Chart.js"></script>
+<script type="text/javascript" src="taffy.js"></script>s
+<script src="jquery.raty.min.js"></script>
+ <script src="jquery.quovolver.js" type="text/javascript"></script>
+ <script src="messi.js"></script>
+ <script type="text/javascript" language="javascript" src="foodlog.js"></script>
 	 
-	<script src="Chart.js"/></script>
-	
 </head> 
 
 	
 <body> 
 
 <!-- Start of first page: #one -->
-<div data-role="page" id="main">
+<div data-role="page" id="detail">
 
 	<div data-role="header">
 		<h1><?php echo $name;?></h1>
@@ -180,7 +178,7 @@
 		   
 			var myDoughnut = new Chart(document.getElementById("detail_canvas").getContext("2d")).Doughnut(doughnutData);
 	
-  		$(document).bind('pageinit',function() {
+  		$(document).on('pageinit',function() {
       
   				//$('blockquote').quovolver();
 				$('.quotes').quovolver({
@@ -192,43 +190,49 @@
 			    
 	  		  	$('#star').raty({ readOnly: true,score: <?php echo $rank/2.0;?>, });
 				initDetailPage();
+			   //Note the comment below from @Taifun.
   			});
-			var currentItem={id:<?php echo $id;?>,kcal:<?php echo $kcal;?>};
+			var currentItem={id:<?php echo $id;?>,kcal:<?php echo $kcal;?>,amount:<?php echo $amount;?>};
 		  </script>
 		 
 		 
 	</div><!-- /content -->
-</div><!-- /page one -->
+	<div data-role="popup" id="popupAdded">
+	  <p>Meal was added to the diary<p>
+	</div>
+	<div data-role="popup" id="popup_option" 
+	    data-theme="a" class="ui-corner-bottom ui-content" data-overlay-theme="a">
 
-<div data-role="popup" id="popup_option" 
-    data-theme="a" class="ui-corner-bottom ui-content" data-overlay-theme="a">
+	     <div data-role="content">
+	        <h3 class="ui-title">Limit exceeded!</h3>
 
-     <div data-role="content">
-        <h3 class="ui-title">Are you sure?</h3>
+	        <p id="limit_text">You have exceeded your limits the ticket.</p>
 
-        <p id="limit_text">You have exceeded your limits the ticket.</p>
-
-	 <div class="ui-grid-a">
-           <div class="ui-block-a">
-               <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="d" data-corners="true" data-shadow="true" class="ui-btn ui-shadow 					ui-btn-corner-all ui-btn-up-d" id="closebtn">
-                   Cancel
-               </a>
+		 <div class="ui-grid-a">
+	           <div class="ui-block-a" id="buttoncontainer">
+	               <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="d" data-corners="true" data-shadow="true" class="ui-btn ui-shadow 					ui-btn-corner-all ui-btn-up-d" id="closebtn">
+	                   Cancel
+	               </a>
           
-           </div>
-           <div class="ui-block-b">
-               <a href="#" data-role="button" data-inline="true" data-rel="button" data-theme="b" data-corners="true" data-shadow="true" class="ui-btn ui-shadow 					ui-btn-corner-all ui-btn-up-b" id="okbtn">
-                   OK
-               </a>
+	           </div>
+	           <div class="ui-block-b" id="buttoncontainer">
+	               <a href="#" data-role="button" data-inline="true" data-rel="button" data-theme="b" data-corners="true" data-shadow="true" class="ui-btn ui-shadow 					ui-btn-corner-all ui-btn-up-b" id="okbtn">
+	                   OK
+				   </a>
 		
           
-           </div>
-	   </div>
+	           </div>
+		   </div>
+	
+</div><!-- /page one -->
+
 
        
 		
 	   <script>
 	$('#closebtn').closest('.ui-btn').hide();
 	$('#okbtn').closest('.ui-btn').hide();
+
 	   </script>
 
       

@@ -6,26 +6,20 @@ $date=$_GET["date"];
 <head>
 
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
     <title><?php echo $date;?></title>
-    <link href="jquery.mobile.flatui.css" rel="stylesheet" type="text/css">
-    <link href="food.css" rel="stylesheet" type="text/css">
-    <link href="style.css" media="screen" rel="stylesheet" type="text/css">
-    <link href=
-    "http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.css"
-    rel="stylesheet" type="text/css">
-    <script src=
-    "http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="jquery.raty.min.js"></script>
-    <script src="http://code.jquery.com/mobile/latest/jquery.mobile.js"></script>
-    <script src="taffy.js" type="text/javascript"></script>
-    <script src="foodlog.js" type="text/javascript"></script>
-    <script src="taffy.extend.group.js" type="text/javascript"></script>
-    <script src="jquery.quovolver.js" type="text/javascript"></script>
-    <script src=
-    "http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog2.min.js"
-    type="text/javascript"></script>
-    <script src="Chart.js"></script>
+ <link rel="stylesheet" type="text/css" href="jquery.mobile.flatui.css" />
+<link rel="stylesheet" type="text/css" href="food.css" />
+<link rel="stylesheet" href="messi.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+<script type="text/javascript" language="javascript" src="Chart.js"></script>
+<script type="text/javascript" src="taffy.js"></script>s
+<script src="jquery.raty.min.js"></script>
+ <script src="jquery.quovolver.js" type="text/javascript"></script>
+ <script src="messi.js"></script>
+ <script type="text/javascript" language="javascript" src="foodlog.js"></script>
+   
     <script>
 
     </script>
@@ -46,11 +40,17 @@ $date=$_GET["date"];
             data-theme="b" id="meal-listview"></ul>
         </div><!-- /content -->
 		<script>
-		date=new Date(<?php echo '"'.$date.'"';?>);
-	    loadMealData();
+  		$(document).on('pageinit',function() {
+      
+			mealDate=new Date();
+			mealDate.setTime(<?php echo '"'.$date.'"';?>);
+		    loadMealData(mealDate);
 	  
-	  $("#title").html(date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear());
-	  document.title = 'Meals from '+date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear();
+		  	$("#title").html(mealDate.getDate()+"."+(mealDate.getMonth()+1)+"."+mealDate.getFullYear());
+		  	document.title = 'Meals from '+mealDate.getDate()+"."+(mealDate.getMonth()+1)+"."+mealDate.getFullYear();
+  				
+  			});
+		
 		</script>
     </div><!-- /page one -->
 	
