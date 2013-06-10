@@ -53,13 +53,13 @@
 			<?php echo '<img class="foodimg" src="'.$thumbsrc.'" alt="Smiley face" style="width: 30%; height: auto; border-top-left-radius: 14px;border-top-right-radius: 14px;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">'; ?>
 		</div>
 		
-		<div class="ui-grid-solo" style="text-align: center;">
-			<ul  style="margin-left:20px;">
-						        <li> <div class="textlarge"><?php echo $name;?></div> </li>
+		<div class="ui-grid-solo" style="text-align: center;margin-top: 2%;">
+			<ul >
+						        <li> <div class="textlarge" style="font-weight: bold;font-size: 20px"><?php echo $name;?></div> </li>
 								<li></li>
 						        <li> <div class="textmiddle"><?php echo $group;?></div> </li>
 								 <li> <div class="textmiddle"><?php echo $amount." ".$unit." has ".$kcal." kCal";?></div> </li>
-				</ul>
+			</ul>
 		</div>
 		
 		<div class="ui-grid-a">
