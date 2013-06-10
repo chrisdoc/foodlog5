@@ -98,10 +98,13 @@
 		</div>
 		
 		
+		<div class="ui-grid-solo" style="width: 90%;margin-left: 5%">
+        	<a href="#" data-role="button" data-type="v" data-theme="g" id="add_meal">Add meal</a>
+        </div>
 		
-		<div class="ui-grid-solo">
+		<!--<div class="ui-grid-solo">
 			<div class="ui-block-a"><button type="v" data-theme="b" id="add_meal">Add meal</button></div>
-		</div>
+		</div>-->
 		
 		<div class="ui-grid-solo">
 			
