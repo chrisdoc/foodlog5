@@ -52,8 +52,8 @@
 		
 		
 		<div class="ui-grid-a">
-            <div class="ui-block-a">
-            	<?php echo '<img class="foodimg" src="'.$thumbsrc.'" alt="Smiley face">'; ?>
+            <div class="ui-block-a" style="text-align: center;width: 100%;">
+            	<?php echo '<img class="foodimg" src="'.$thumbsrc.'" alt="Smiley face" style="width: 30%; height: auto">'; ?>
             </div>
             <div class="ui-block-b">
 				<ul  style="margin-left:20px;">
@@ -103,10 +103,10 @@
 		
 		<div class="ui-grid-solo">
 			
-			<div class="ui-block-a" style="width: 50%; margin-left: 37%;">
+			<div class="ui-block-a" style="width: 50%; margin-left: 25%;">
   		  <?php
 		  echo '
-		  <div class="panels">
+		  <div class="panels" style="margin-left: 10%;">
 		                      <div class="panel" id="panel-1">
 								  <div class="quotes">';
   		  $quote='<blockquote>
