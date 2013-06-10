@@ -55,9 +55,9 @@
 		
 		<div class="ui-grid-solo" style="text-align: center;margin-top: 2%;">
 			<ul >
-						        <li> <div class="textlarge" style="font-weight: bold;font-size: 20px"><?php echo $name;?></div> </li>
+						        <li> <div class="textlarge" style="font-weight: bold;font-size: 22px"><?php echo $name;?></div> </li>
 								<li></li>
-						        <li> <div class="textmiddle"><?php echo $group;?></div> </li>
+						        <li> <div class="textmiddle" style="font-style: oblique;"><?php echo $group;?></div> </li>
 								 <li> <div class="textmiddle"><?php echo $amount." ".$unit." has ".$kcal." kCal";?></div> </li>
 			</ul>
 		</div>
@@ -75,10 +75,10 @@
 				</ul>
             </div>-->
 			
-            <div class="ui-block-a">
+            <div class="ui-block-a" style="margin-top: 3%;">
             	<canvas id="detail_canvas" height="150" width="150"></canvas>
             </div>
-            <div class="ui-block-b">
+            <div class="ui-block-b" style="margin-top: 3%;">
 				<ul>
 						        <li class="square fat"> <a class="nutrition">fat&nbsp;(<?php echo $fat;?>g)</a> </li>
 						        <li class="square sugar"> <a class="nutrition">sugar&nbsp;(<?php echo $sugar;?>g)</a> </li>
@@ -86,10 +86,10 @@
 						        <li class="square carbon"> <a class="nutrition">carbohydrates&nbsp;(<?php echo $kh;?>g)</a> </li>
 				</ul>
             </div>
-	        <div class="ui-block-a">
+	        <div class="ui-block-a" style="margin-top: 2%;">
 				<div class="textmiddle">User rating: </div>
 	        </div>
-	        <div class="ui-block-b">
+	        <div class="ui-block-b" style="margin-top: 2%;">
 	        	<div id="star"></div>
 	        </div>
 	        <div class="ui-block-a">
