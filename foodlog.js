@@ -89,6 +89,11 @@ function loadMealData(mealDate){
         
     $('#meal-listview')
         .listview('refresh');
+		
+			$("img[class='ui-li-thumb']").load(function() {
+				$(this).css('margin-top',((80-this.height)/2));
+				$(this).css('margin-left',10);
+			});
 }
 
 
@@ -154,8 +159,13 @@ function loadHistoryData(){
         $('#history-listview')
             .append('<li id="divider">' + '<a href="" onclick="displayMealDetails('+i+');">'  +                   '<h3                class="ui-li-heading">' +dateString+'</h3>' + '<p class="ui-li-desc"> You have consumed ' +totalKCal+ ' kCal</p>' + '</a>' + '</li>');
 			i++;
-    });
-	$('history-listview').listview().listview('refresh');
+		});
+		$('history-listview').listview().listview('refresh');
+		
+			$("img[class='ui-li-thumb']").load(function() {
+				$(this).css('margin-top',((80-this.height)/2));
+				$(this).css('margin-left',10);
+			});
    /* $('#result-listview')
         .listview('refresh');*/
 }
