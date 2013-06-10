@@ -103,7 +103,7 @@
 		
 		<div class="ui-grid-solo">
 			
-			<div class="ui-block-a" style="width: 50%; margin-left: 25%;>
+			<div class="ui-block-a" style="width: 50%; margin-left: 37%;">
   		  <?php
 		  echo '
 		  <div class="panels">
