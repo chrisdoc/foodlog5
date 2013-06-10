@@ -252,6 +252,7 @@ function searchDB(data) {
 			$('#result-listview').listview().listview('refresh');
 			$("img[class='ui-li-thumb']").load(function() {
 				$(this).css('margin-top',13.5);
+				$(this).css('max-height',53);
 				$(this).css('margin-left',10);
 			});
 			
