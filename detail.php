@@ -76,7 +76,7 @@
             </div>-->
 			
             <div class="ui-block-a" style="margin-top: 3%;padding-left: 30%;">
-            	<canvas id="detail_canvas" height="52%" width="52%"></canvas>
+            	<canvas id="detail_canvas" style="height: 52%; width: 52%;"></canvas>
             </div>
             <div class="ui-block-b" style="margin-top: 3%;">
 				<ul>
