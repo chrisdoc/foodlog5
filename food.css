@@ -1,4 +1,10 @@
-
+div[class|=ui-grid] { 
+    text-align: center;
+    padding: 30px; }
+div[class|=ui-block] { 
+    padding: 10px;
+    vertical-align: middle;
+    display: inline-block; }
 .square {
 	width: 10px;
 	height: 25px;

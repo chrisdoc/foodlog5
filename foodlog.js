@@ -315,8 +315,9 @@ function initSettings(){
 	        localStorage.daily_limit=$('#daily_limit').val();
 	        localStorage.meal_limit=$('#meal_limit').val();
 			
-			alert("Settings saved");
-
+			$("#popupSaved").popup("open");
+			window.setTimeout(function() {$('#popupSaved').popup("close")}, 2000);
+			
 	      });
 }
 loadFromLocalStorage=function(){

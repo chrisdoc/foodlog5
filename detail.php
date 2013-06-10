@@ -69,10 +69,10 @@
             </div>
             <div class="ui-block-b">
 				<ul>
-						        <li class="square fat"> <a class="nutrition">fat</a> </li>
-						        <li class="square sugar"> <a class="nutrition">sugar</a> </li>
-						        <li class="square df"> <a class="nutrition">df</a> </li>
-						        <li class="square carbon"> <a class="nutrition">carbohydrates</a> </li>
+						        <li class="square fat"> <a class="nutrition">fat&nbsp;(<?php echo $fat;?>g)</a> </li>
+						        <li class="square sugar"> <a class="nutrition">sugar&nbsp;(<?php echo $sugar;?>g)</a> </li>
+						        <li class="square df"> <a class="nutrition">dietary&nbsp;fiber&nbsp;(<?php echo $df;?>g)</a> </li>
+						        <li class="square carbon"> <a class="nutrition">carbohydrates&nbsp;(<?php echo $kh;?>g)</a> </li>
 				</ul>
             </div>
 	        <div class="ui-block-a">
