@@ -105,7 +105,7 @@
 		
 		<div class="ui-grid-solo">
 			
-			<div class="ui-block-a">
+			<!--<div class="ui-block-a">
   		  <?php
 		  echo '
 		  <div class="panels">
@@ -125,8 +125,8 @@
   		  unset($c);
 		  
   		  ?>
+			</div>-->
 		</div>
-			</div>
 
 		
 		
