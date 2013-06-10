@@ -246,7 +246,7 @@ function searchDB(data) {
 					foodDB.merge('[{"id":'+parseInt(id)+',"name":"'+name+'","unit":"'+unit+'","grouo":"'+group+'","kcal":"'+kcal+'","fat":"'+fat+'","kh":"'+kh+'","sugar":"'+sugar+'","df":"'+df+'","thumbsrc":"'+thumbsrc+'","amount":"'+amount+'","rank":"'+rank+'"}]');
 				}
 				$('#result-listview')
-					var bg = 'style="border:1px solid #333333;background:#333333;"'
+					var bg = 'style="border:1px solid #333333;background:#333333;"';
 					.append('<li id="divider"' + bg + '>' + '<a href="" onclick="displayDetails('+id +');">' + '<img style="border-radius: 10px;" src="' + thumbsrc + '" class="ui-li-thumb">' + '<h3 class="ui-li-heading">' + $(this)
 					.find("description")
 					.find("name")
