@@ -173,7 +173,7 @@
 .ui-body-b .ui-link:visited,.ui-body-b .ui-link:hover,.ui-body-b .ui-link:active{color:#1abc9c}
 .ui-body-b.ui-input-text{border:2px solid #eee;}
 .ui-body-b.ui-input-text.ui-focus{border:2px solid #1abc9c;-webkit-transition:border linear .2s;-moz-transition:border linear .2s;-o-transition:border linear .2s;transition:border linear .2s}
-.ui-btn-up-b{border:1px solid #16a085;background:#16a085;font-weight:bold;color:#fff;}
+.ui-btn-up-b{border:1px solid #AAD041/*#16a085*/;background:#AAD041;font-weight:bold;color:#fff;}
 .ui-btn-up-b:visited,.ui-btn-up-b a.ui-link-inherit{color:#fff}
 .ui-btn-hover-b{border:1px solid #1abc9c;background:#1abc9c;font-weight:bold;color:#fff;}
 .ui-btn-hover-b:visited,.ui-btn-hover-b:hover,.ui-btn-hover-b a.ui-link-inherit{color:#fff}
