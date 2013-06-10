@@ -248,7 +248,6 @@ function searchDB(data) {
 					.find("description")
 					.find("name")
 					.text() + '</h3>' + '<p class="ui-li-desc">' + group + '</p>' + '</a>' + '</li>');
-					i++;
 			}
 
 			);
