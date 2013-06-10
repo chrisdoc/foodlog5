@@ -410,7 +410,8 @@ function initDetailPage(){
 								$('#closebtn').closest('.ui-btn').show();
 								$('#okbtn').closest('.ui-btn').show();
 								$('#okbtn').click(function(){
-									console.log({date:d.toJSON(),id:id,amount:amount})
+									console.log({date:d.toJSON(),id:id,amount:amount});
+									console.log("added to history");
 									mealDB.insert({date:d.toJSON(),id:id,amount:amount});
 									$( '#popup_option' ).popup( 'close', { transition: "flow" } );
 								});
@@ -422,7 +423,8 @@ function initDetailPage(){
 								$('#closebtn').closest('.ui-btn').show();
 								$('#okbtn').closest('.ui-btn').show();
 								$('#okbtn').click(function(){
-									console.log({date:d.toJSON(),id:id,amount:amount})
+									console.log("added to history");
+									console.log({date:d.toJSON(),id:id,amount:amount});
 									mealDB.insert({date:d.toJSON(),id:id,amount:amount});
 									$( '#popup_option' ).popup( 'close', { transition: "flow" } );
 								});
@@ -430,6 +432,8 @@ function initDetailPage(){
 		}
 		else if(kcal < localStorage.meal_limit && (todaysKcal + kcal) < localStorage.daily_limit){
 			mealDB.insert({date:d.toJSON(),id:id,amount:amount});
+			console.log("added to history");
+			console.log({date:d.toJSON(),id:id,amount:amount})
 			$("#popupAdded").popup("open");
 			window.setTimeout(function() {$('#popupAdded').popup("close")}, 1000);
 			
