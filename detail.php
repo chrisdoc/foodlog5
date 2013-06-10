@@ -53,7 +53,7 @@
             <div class="ui-block-a" style="text-align: center;width: 100%;">
             	<?php echo '<img class="foodimg" src="'.$thumbsrc.'" alt="Smiley face" style="width: 30%; height: auto; border-top-left-radius: 14px;border-top-right-radius: 14px;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">'; ?>
             </div>
-            <div class="ui-block-b" style="text-align: center;width: 100%;">
+            <div class="ui-block-b">
 				<ul  style="margin-left:20px;">
 						        <li> <div class="textlarge"><?php echo $name;?></div> </li>
 								<li></li>
