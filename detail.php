@@ -49,11 +49,6 @@
 	</div>
 	
 	<div data-role="content" >	
-		
-		<div class="ui-grid-solo">
-			<?php echo '<img class="foodimg" src="'.$thumbsrc.'" alt="Smiley face" style="width: 30%; height: auto">'; ?>
-		</div>
-		
 		<div class="ui-grid-a">
             <div class="ui-block-a" style="text-align: center;width: 100%;">
             	<?php echo '<img class="foodimg" src="'.$thumbsrc.'" alt="Smiley face" style="width: 30%; height: auto">'; ?>
