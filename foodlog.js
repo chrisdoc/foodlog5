@@ -240,7 +240,9 @@ function searchDB(data) {
 
 			);
 			$('#result-listview').listview().listview('refresh');
-			
+			$("img[class='ui-li-thumb']").load(function() {
+    $(this).css('padding-top',((80-this.height)/2));
+});
 			$.mobile.loading("hide");
 		},
 		fail: function() {
