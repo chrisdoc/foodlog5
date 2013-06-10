@@ -82,7 +82,7 @@ function loadMealData(mealDate){
 					var date=new Date(record["date"]);
 					
 		            $('#meal-listview')
-		                .append('<li>' +'<a href="" onclick="displayFoodDetails('+id+');">' +'<img style="border-radius: 10px;" src="' + thumbsrc + '" class="ui-li-thumb">' +                   '<h3                class="ui-li-heading">' 							+name+'</h3>' + '<p class="ui-li-desc">'+date.toLocaleTimeString()+' '+amount_eaten+' '+unit+', '+total+ ' kCal</p>'  + '</a></li>');
+		                .append('<li id="divider">' +'<a href="" onclick="displayFoodDetails('+id+');">' +'<img style="border-radius: 10px;" src="' + thumbsrc + '" class="ui-li-thumb">' +                   '<h3                class="ui-li-heading">' 							+name+'</h3>' + '<p class="ui-li-desc">'+date.toLocaleTimeString()+' '+amount_eaten+' '+unit+', '+total+ ' kCal</p>'  + '</a></li>');
 						
 		        });
 				
@@ -152,7 +152,7 @@ function loadHistoryData(){
         var dateString=date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear();
         var jsonDate=date.toJSON();
         $('#history-listview')
-            .append('<li>' + '<a href="" onclick="displayMealDetails('+i+');">'  +                   '<h3                class="ui-li-heading">' +dateString+'</h3>' + '<p class="ui-li-desc"> You have consumed ' +totalKCal+ ' kCal</p>' + '</a>' + '</li>');
+            .append('<li id="divider">' + '<a href="" onclick="displayMealDetails('+i+');">'  +                   '<h3                class="ui-li-heading">' +dateString+'</h3>' + '<p class="ui-li-desc"> You have consumed ' +totalKCal+ ' kCal</p>' + '</a>' + '</li>');
 			i++;
     });
 	$('history-listview').listview().listview('refresh');
@@ -231,7 +231,7 @@ function searchDB(data) {
 					foodDB.merge('[{"id":'+parseInt(id)+',"name":"'+name+'","unit":"'+unit+'","grouo":"'+group+'","kcal":"'+kcal+'","fat":"'+fat+'","kh":"'+kh+'","sugar":"'+sugar+'","df":"'+df+'","thumbsrc":"'+thumbsrc+'","amount":"'+amount+'","rank":"'+rank+'"}]');
 				}
 				$('#result-listview')
-					.append('<li id="redHero">' + '<a href="" onclick="displayDetails('+id +');">' + '<img style="border-radius: 10px;" src="' + thumbsrc + '" class="ui-li-thumb">' + '<h3 class="ui-li-heading">' + $(this)
+					.append('<li id="divider">' + '<a href="" onclick="displayDetails('+id +');">' + '<img style="border-radius: 10px;" src="' + thumbsrc + '" class="ui-li-thumb">' + '<h3 class="ui-li-heading">' + $(this)
 					.find("description")
 					.find("name")
 					.text() + '</h3>' + '<p class="ui-li-desc">' + group + '</p>' + '</a>' + '</li>');
