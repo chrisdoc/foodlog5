@@ -51,9 +51,9 @@ $id=$_GET["foodid"];
 					</ul>
 	            </div>
 			
-	            <div class="ui-block-a">
-	            	<canvas id="food_canvas" height="150" width="150"></canvas>
-	            </div>
+	            <div class="ui-block-a" style="margin-top: 3%;padding-left: 30%;">
+					<canvas id="food_canvas" style="height: 100%; width: 100%;"></canvas>
+				</div>
 	            <div class="ui-block-b">
 					<ul>
 							        <li class="square fat"> <a class="nutrition">fat</a> </li>
