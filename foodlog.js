@@ -428,7 +428,7 @@ function initDetailPage(){
 								});
 			                    $( '#popup_option' ).popup( 'open', { transition: "flow" } );
 		}
-		else if(kCal < localStorage.meal_limit && todaysKcal + kcal < localStorage.daily_limit){
+		else if(kCal < localStorage.meal_limit && (todaysKcal + kcal) < localStorage.daily_limit){
 			mealDB.insert({date:d.toJSON(),id:id,amount:amount});
 			$("#popupAdded").popup("open");
 			window.setTimeout(function() {$('#popupAdded').popup("close")}, 1000);
