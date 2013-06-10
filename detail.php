@@ -98,7 +98,7 @@
 		</div>
 		
 		<div class="ui-grid-solo">
-			<div class="ui-block-a" style="width: 90%; margin-left: 5%;><button type="v" data-theme="b" id="add_meal">Add meal</button></div>
+			<div class="ui-block-a" style="width: 90%; margin-left: 5%;"><button type="v" data-theme="b" id="add_meal">Add meal</button></div>
 		</div>
 		
 		<div class="ui-grid-solo">
