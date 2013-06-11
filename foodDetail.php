@@ -38,7 +38,7 @@ $key=$_GET["key"];
 
   	  	
 		<div data-role="content" >	
-			<div class="ui-grid-a">
+			<!--<div class="ui-grid-a">
 	            <div class="ui-block-a">
 	            	<img id="food_img" class="foodimg" alt="">
 	            </div>
@@ -61,26 +61,26 @@ $key=$_GET["key"];
 							        <li class="square df"> <a class="nutrition" id="food_df">Dietary&nbsp;fiber&nbsp;</a> </li>
 							        <li class="square carbon"> <a class="nutrition" id="food_kh">Carbohydrates</a> </li>
 					</ul>
-	            </div>	-->		
-			</div>
+	            </div>	
+			</div>-->
 			
-			<!--<div class="ui-grid-solo" style="text-align: center;margin-top: 2%;">
+			<div class="ui-grid-solo" style="text-align: center;margin-top: 2%;">
 				<ul >
-					<li> <div class="textlarge" style="font-weight: bold;"><?php echo $name;?></div> </li>
+					<li> <div class="textlarge" id="food_name" style="font-weight: bold;"></div> </li>
 					<li></li>
 				</ul>
 			</div>
 		
 			<div class="ui-grid-solo" style="text-align: center;">
-				<?php echo '<img class="foodimg" src="'.$thumbsrc.'" alt="Smiley face" style="width: 40%; height: auto; border-top-left-radius: 14px;border-top-right-radius: 14px;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">'; ?>
+				<img class="foodimg" id="food_img" alt="Smiley face" style="width: 40%; height: auto; border-top-left-radius: 14px;border-top-right-radius: 14px;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">
 			</div>
 		
 			<div class="ui-grid-solo" style="text-align: center;margin-top: 1%;">
 				<ul >
-					<li> <div class="textmiddle" style="font-style: oblique;"><?php echo $group;?></div> </li>
-					<li> <div class="textmiddle"><?php echo $amount." ".$unit." has ".$kcal." kCal";?></div> </li>
+					<li> <div class="textmiddle" id="food_group" style="font-style: oblique;"></div> </li>
+					<li> <div class="textmiddle" id="food_amount_unit"></div> </li>
 				</ul>
-			</div>-->
+			</div>
 		
 			<div class="ui-grid-solo">
 				<div class="DivParent" style="height: 150px;padding-right: 10%;margin-top: 3%;">
