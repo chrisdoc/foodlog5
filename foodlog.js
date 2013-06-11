@@ -414,6 +414,7 @@ function initDetailPage(){
 								$('#limit_text').text("You have exceeded your daily limit, do you wanna continue?");
 								$('#closebtn').closest('.ui-btn').show();
 								$('#okbtn').closest('.ui-btn').show();
+								$('#okbtn').unbind();
 								$('#okbtn').click(function(){
 									console.log({date:d.toJSON(),id:id,amount:amount});
 									console.log("added to history");
@@ -427,6 +428,7 @@ function initDetailPage(){
 								$('#limit_text').text("You have exceeded your meal limit, do you wanna continue?");
 								$('#closebtn').closest('.ui-btn').show();
 								$('#okbtn').closest('.ui-btn').show();
+								$('#okbtn').unbind();
 								$('#okbtn').click(function(){
 									console.log("added to history");
 									console.log({date:d.toJSON(),id:id,amount:amount});
