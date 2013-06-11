@@ -68,7 +68,7 @@
 			</ul>
 		</div>
 		
-			<div class="ui-grid-solo" style="text-align: center;">
+			<div class="ui-grid-solo">
 				<div>
 				<canvas id="detail_canvas" height="100" width="100"></canvas>
 				<ul>
