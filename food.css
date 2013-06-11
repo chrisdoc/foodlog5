@@ -7,7 +7,7 @@ div[class|=ui-block] {
     display: inline-block; }*/
 	
 .DivParent {
-    height: 30px;
+    height: 40px;
     white-space: nowrap;
     text-align: center;
 }
