@@ -89,7 +89,6 @@ color: #383838;
 }
 blockquote:before {
 display: block;
-content: "\201C";
 position: absolute;
 left: -20px;
 top: -20px;

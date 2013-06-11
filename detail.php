@@ -214,7 +214,7 @@
 		  <div class="panels">
 		                      <div class="panel" id="panel-1">
 								  <div class="quotes">';
-  		  $quote='<blockquote><meta name="viewport" content="width=device-width"/>
+  		  $quote='<blockquote><meta name="viewport" content="width=device-width, initial-scale=1.5"/>
   			  			%s
 		  <cite>Anonymous</cite>
   			  		</blockquote>';
