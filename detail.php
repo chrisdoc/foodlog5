@@ -223,6 +223,8 @@
 			 
   		      echo sprintf($quote,$c);
   		  }
+		  
+		  echo '<meta name="viewport" content="width=device-width"/>';
 		  echo '</div> </div> </div>';
   		 
   		  unset($c);
