@@ -69,10 +69,10 @@
 		</div>
 		
 		<div class="ui-grid-a">
-            <div class="ui-block-a" style="margin-top: 3%;padding-left: 0%;text-align: center;width: 85%;">
-            	<canvas id="detail_canvas" style="height: 100%; width: 100%;"></canvas>
+            <div class="ui-block-a" style="margin-top: 3%;margin-right: 3%;text-align: right;width: 40%;">
+            	<canvas id="detail_canvas" height="100" width="100"></canvas>
             </div>
-            <div class="ui-block-b" style="margin-top: 3%;width: 20%;margin-left: -35%;">
+            <div class="ui-block-b" style="margin-top: 3%;width: 50%;">
 				<ul>
 						        <li class="square fat"> <a class="nutrition">Fat&nbsp;(<?php echo $fat;?>g)</a> </li>
 						        <li class="square sugar"> <a class="nutrition">Sugar&nbsp;(<?php echo $sugar;?>g)</a> </li>
@@ -80,7 +80,7 @@
 						        <li class="square carbon"> <a class="nutrition">Carbohydrates&nbsp;(<?php echo $kh;?>g)</a> </li>
 				</ul>
             </div>
-	        <div class="ui-block-a" style="margin-top: 2%;">
+	        <div class="ui-block-a" style="margin-top: 1.6%;text-align: right;padding-right: 2%;">
 				<div class="textmiddle">User rating: </div>
 	        </div>
 	        <div class="ui-block-b" style="margin-top: 2%;">
