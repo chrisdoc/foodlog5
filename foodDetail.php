@@ -33,13 +33,11 @@ $key=$_GET["key"];
 
     <div data-role="page" id="main">
         <div data-role="header">
-            <h1 id="food_header"></h1>
+            <h1>Product details</h1>
         </div>
 
   	  	
 		<div data-role="content" >	
-		
-		
 			<div class="ui-grid-a">
 	            <div class="ui-block-a">
 	            	<img id="food_img" class="foodimg" alt="">
@@ -53,7 +51,7 @@ $key=$_GET["key"];
 					</ul>
 	            </div>
 			
-	            <div class="ui-block-a" style="margin-top: 3%;padding-left: 30%;">
+	            <!--<div class="ui-block-a" style="margin-top: 3%;padding-left: 30%;">
 					<canvas id="food_canvas" style="height: 100%; width: 100%;"></canvas>
 				</div>
 	            <div class="ui-block-b">
@@ -63,15 +61,48 @@ $key=$_GET["key"];
 							        <li class="square df"> <a class="nutrition" id="food_df">Dietary&nbsp;fiber&nbsp;</a> </li>
 							        <li class="square carbon"> <a class="nutrition" id="food_kh">Carbohydrates</a> </li>
 					</ul>
-	            </div>
-		        <div class="ui-block-a">
-					<div class="textmiddle" id="food_rating">User rating: </div>
-		        </div>
-		        <div class="ui-block-b">
-		        	<div id="food_star"></div>
-		        </div>
-				
+	            </div>	-->		
 			</div>
+			
+			<!--<div class="ui-grid-solo" style="text-align: center;margin-top: 2%;">
+				<ul >
+					<li> <div class="textlarge" style="font-weight: bold;"><?php echo $name;?></div> </li>
+					<li></li>
+				</ul>
+			</div>
+		
+			<div class="ui-grid-solo" style="text-align: center;">
+				<?php echo '<img class="foodimg" src="'.$thumbsrc.'" alt="Smiley face" style="width: 40%; height: auto; border-top-left-radius: 14px;border-top-right-radius: 14px;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">'; ?>
+			</div>
+		
+			<div class="ui-grid-solo" style="text-align: center;margin-top: 1%;">
+				<ul >
+					<li> <div class="textmiddle" style="font-style: oblique;"><?php echo $group;?></div> </li>
+					<li> <div class="textmiddle"><?php echo $amount." ".$unit." has ".$kcal." kCal";?></div> </li>
+				</ul>
+			</div>-->
+		
+			<div class="ui-grid-solo">
+				<div class="DivParent" style="height: 150px;padding-right: 10%;margin-top: 3%;">
+					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
+						<div class="ui-block-a" style="margin-right: 3%;text-align: right;">
+							<canvas id="food_canvas" height="150" width="150"></canvas>
+						</div>
+					</div>
+					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
+						<div class="ui-block-b" style="width: 50%;">
+								<ul>
+							        <li class="square fat"> <a class="nutrition" id="food_fat">Fat</a> </li>
+							        <li class="square sugar"> <a class="nutrition" id="food_sugar">Sugar</a> </li>
+							        <li class="square df"> <a class="nutrition" id="food_df">Dietary&nbsp;fiber&nbsp;</a> </li>
+							        <li class="square carbon"> <a class="nutrition" id="food_kh">Carbohydrates</a> </li>
+								</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+					
 			<div class="ui-grid-solo">
 				<div class="ui-block-a" style="width: 90%; margin-left: 5%;margin-top: 5%"><button type="v" data-theme="b" id="delete_meal">Delete meal</button></div>
 			</div>

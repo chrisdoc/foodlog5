@@ -45,7 +45,7 @@
 <div data-role="page" id="detail">
 
 	<div data-role="header">
-		<h1><?php echo 'Product details'//$name;?></h1>
+		<h1>Product details</h1>
 	</div>
 	
 	<div data-role="content" >	
