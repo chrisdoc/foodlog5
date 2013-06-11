@@ -68,7 +68,7 @@
 			</ul>
 		</div>
 		
-		<div class="ui-grid-a">
+		<!--<div class="ui-grid-a">
             <div class="ui-block-a" style="margin-top: 3%;margin-right: 3%;text-align: right;width: 40%;">
             	<canvas id="detail_canvas" height="100" width="100"></canvas>
             </div>
@@ -104,20 +104,53 @@
 										echo $kh;?>g)</a> </li>
 				</ul>
             </div>
-	        <!--<div class="ui-block-a" style="margin-top: 1.6%;text-align: right;padding-right: 2%;">
-				<div class="textmiddle">User rating: </div>
-	        </div>
-	        <div class="ui-block-b" style="margin-top: 2%;">
-	        	<div id="star"></div>
-	        </div>
-	        <div class="ui-block-a" style="text-align: right;padding-right: 2%;margin-top: 2.5%;">
-				<div class="textmiddle">Amount in <?php echo $unit?>: </div>
-	        </div>
-	        <div class="ui-block-b" style="margin-top: 1%;">
-	        	<input type="number" id="amount" name="amount" min="1" max="3000" value=<?php echo '"'.$amount.'"';?>>
-	        </div>-->
-		</div>
+		</div>-->
 		
+		<div class="ui-grid-solo">
+			<div class="DivParent" height="150px">
+					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
+						<div class="ui-block-a" style="margin-top: 3%;margin-right: 3%;text-align: right;">
+							<canvas id="detail_canvas" height="100" width="100"></canvas>
+						</div>
+					</div>
+					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
+						            <div class="ui-block-b" style="margin-top: 3%;width: 50%;">
+				<ul>
+						        <li class="square fat"> <a class="nutrition">Fat&nbsp;(<?php 
+									if($fat=="")
+										echo '0';
+									else if($fat<0)
+										echo '0';
+									else
+										echo $fat;?>g)</a> </li>
+						        <li class="square sugar"> <a class="nutrition">Sugar&nbsp;(<?php 
+									if($sugar=="")
+										echo '0';
+									else if($sugar<0)
+										echo '0';
+									else
+										echo $sugar;?>g)</a> </li>
+						        <li class="square df"> <a class="nutrition">Dietary&nbsp;fiber&nbsp;(<?php 
+									if($df=="")
+										echo '0';
+									else if($df<0)
+										echo '0';
+									else
+										echo $df;?>g)</a> </li>
+						        <li class="square carbon"> <a class="nutrition">Carbohydrates&nbsp;(<?php 
+									if($kh=="")
+										echo '0';
+									else if($kh<0)
+										echo '0';
+									else
+										echo $kh;?>g)</a> </li>
+							</ul>
+						</div>
+					</div>
+				<div class="DivHelper"></div>
+			</div>
+		</div>
+
 		<div class="ui-grid-solo">
 			<div class="DivParent"">
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
