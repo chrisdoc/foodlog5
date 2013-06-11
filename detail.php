@@ -119,14 +119,14 @@
 		</div>
 		
 		<div class="ui-grid-solo">
-			<div class="DivParent" style="margin-bottom: 1%;">
+			<div class="DivParent"">
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
-						<div class="ui-block-a" style="margin-top: 1.6%;text-align: right;padding-right: 2%;">
+						<div class="ui-block-a" style="text-align: right;padding-right: 2%;">
 							<div class="textmiddle">User rating: </div>
 						</div>
 					</div>
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
-						<div class="ui-block-b" style="margin-top: 2%;width: 84%;">
+						<div class="ui-block-b" style="width: 84%;">
 							<div id="star"></div>
 						</div>
 					</div>
@@ -167,7 +167,7 @@
 		</div>
 		
 		<div class="ui-grid-solo">
-			<div class="ui-block-a" style="width: 90%; margin-left: 5%;margin-top: 3%"><button type="v" data-theme="b" id="add_meal">Add meal</button></div>
+			<div class="ui-block-a" style="width: 90%; margin-left: 5%;margin-top: 5%"><button type="v" data-theme="b" id="add_meal">Add meal</button></div>
 		</div>
 		
 		<div class="ui-grid-solo">
