@@ -104,14 +104,24 @@
 	        <div class="ui-block-b" style="margin-top: 1%;">
 	        	<input type="number" id="amount" name="amount" min="1" max="3000" value=<?php echo '"'.$amount.'"';?>>
 	        </div>
-	        <div class="ui-block-a">
+	        <!--<div class="ui-block-a">
 				<div class="textmiddle">Time: </div>
 	        </div>
 	        <div class="ui-block-b">
 	        	<input id="time" name="time" type="time"/>
-	        </div>
-			
-			
+	        </div>-->
+		</div>
+		
+		<div class="ui-grid-solo">
+			<div class="DivParent">
+					<div class="DivWhichNeedToBeVerticallyAligned">
+						Time:
+					</div>
+					<div class="DivWhichNeedToBeVerticallyAligned">
+						<input id="time" name="time" type="time"/>
+					</div>
+				<div class="DivHelper"></div>
+			</div>
 		</div>
 		
 		<div class="ui-grid-solo">
