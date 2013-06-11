@@ -69,7 +69,7 @@
 		</div>
 		
 		<div class="ui-grid-a">
-            <div class="ui-block-a" style="margin-top: 3%;padding-left: 0%;text-align: left;width: 50%;">
+            <div class="ui-block-a" style="margin-top: 3%;padding-left: 0%;text-align: right;width: 50%;">
             	<canvas id="detail_canvas" height="100%" width="100%"></canvas>
             </div>
             <div class="ui-block-b" style="margin-top: 3%;width: 50%;margin-left: 0%;">

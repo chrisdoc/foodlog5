@@ -9,6 +9,7 @@ div[class|=ui-block] {
 	width: 10px;
 	height: 25px;
 	background: blue;
+	font-size: 11pt;
 }
 .square.fat {
 	background-color: #F7464A;
@@ -23,11 +24,15 @@ div[class|=ui-block] {
 	background-color: #949FB1;
 }
 .textlarge{
-font-size: 20pt;
+font-size: 19pt;
 }
 .textmiddle{
 font-size: 14pt;
 }
+.textsmall{
+font-size: 11pt;
+}
+
 ul {
 	list-style-type: none;
 	margin: 0;
