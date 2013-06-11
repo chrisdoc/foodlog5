@@ -23,10 +23,10 @@ function loadFoodData(id,amount_eaten){
 	var factor=amount_eaten/item.amount;
 
 	
-	$('#food_fat').html("Fat&nbsp;("+checkVariable(item.fat*factor)+"&nbsp;g)");
-	$('#food_sugar').html("Sugar&nbsp;("+checkVariable(item.sugar*factor)+"&nbsp;g)");
-	$('#food_df').html("Dietary&nbsp;fiber&nbsp;("+checkVariable(item.df*factor)+"&nbsp;g)");
-	$('#food_kh').html("Carbohydrates&nbsp;("+checkVariable(item.kh*factor)+"&nbsp;g)");
+	$('#food_fat').html("Fat&nbsp;("+checkVariable(item.fat*factor)+"g)");
+	$('#food_sugar').html("Sugar&nbsp;("+checkVariable(item.sugar*factor)+"g)");
+	$('#food_df').html("Dietary&nbsp;fiber&nbsp;("+checkVariable(item.df*factor)+"g)");
+	$('#food_kh').html("Carbohydrates&nbsp;("+checkVariable(item.kh*factor)+"g)");
 	
 	var kcal_text=amount_eaten+" "+item.unit+" á "+item.kcal*factor+" kCal";
 	$('#food_amount_unit').text(kcal_text);

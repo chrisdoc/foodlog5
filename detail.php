@@ -74,9 +74,21 @@
             </div>
             <div class="ui-block-b" style="margin-top: 3%;width: 50%;">
 				<ul>
-						        <li class="square fat"> <a class="nutrition">Fat&nbsp;(<?php echo $fat;?>g)</a> </li>
+						        <li class="square fat"> <a class="nutrition">Fat&nbsp;(<?php 
+									if($fat=="")
+										echo '0';
+									else if($fat<0)
+										echo '0';
+									else
+										echo $fat;?>g)</a> </li>
 						        <li class="square sugar"> <a class="nutrition">Sugar&nbsp;(<?php echo $sugar;?>g)</a> </li>
-						        <li class="square df"> <a class="nutrition">Dietary&nbsp;fiber&nbsp;(<?php echo $df;?>g)</a> </li>
+						        <li class="square df"> <a class="nutrition">Dietary&nbsp;fiber&nbsp;(<?php 
+									if($df=="")
+										echo '0';
+									else if($df<0)
+										echo '0';
+									else
+										echo $df;?>g)</a> </li>
 						        <li class="square carbon"> <a class="nutrition">Carbohydrates&nbsp;(<?php echo $kh;?>g)</a> </li>
 				</ul>
             </div>
@@ -160,19 +172,19 @@
 		
 		    var doughnutData = [
 		    {
-		      value: <?php echo $fat;?>,
+		      value: Number(checkVariable(<?php echo $fat;?>)),
 		      color:"#F7464A"
 		    },
 		    {
-		      value : <?php echo $sugar;?>,
+		      value : Number(checkVariable(<?php echo $sugar;?>)),
 		      color : "#46BFBD"
 		    },
 		    {
-		      value : <?php echo $df;?>,
+		      value : Number(checkVariable(<?php echo $df;?>)),
 		      color : "#FDB45C"
 		    },
 		    {
-		      value : <?php echo $kh;?>,
+		      value : Number(checkVariable(<?php echo $kh;?>)),
 		      color : "#949FB1"
 		    }
 
