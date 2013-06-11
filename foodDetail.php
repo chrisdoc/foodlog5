@@ -2,6 +2,7 @@
 
 $id=$_GET["foodid"];
 $amount=$_GET["amount"];
+$key=$_GET["key"];
 ?>
 
 <!DOCTYPE html> 
@@ -69,14 +70,17 @@ $amount=$_GET["amount"];
 		        <div class="ui-block-b">
 		        	<div id="food_star"></div>
 		        </div>
+				
 			</div>
-		
+			<div class="ui-grid-solo">
+				<div class="ui-block-a" style="width: 90%; margin-left: 5%;margin-top: 5%"><button type="v" data-theme="b" id="delete_meal">Delete meal</button></div>
+			</div>
 		
 		
 			<script>
 		$(document).bind('pageinit',function() {
       
-				loadFoodData(<?php echo $id.",".$amount;?>);
+				loadFoodData(<?php echo $id.",".$amount.",".$key; ?>);
 			});
 			
 	  	
@@ -84,6 +88,43 @@ $amount=$_GET["amount"];
 		 
 		 
 		</div><!-- /content -->
+		
+		<div data-role="popup" id="popup_delete" data-theme="a" class="ui-corner-bottom ui-content" data-overlay-theme="a">
+
+		     <div data-role="content" >
+		        <h3 class="ui-title">Delete!</h3>
+
+		        <p id="limit_text">Are you sure you want to delete this meal?</p>
+
+			 <div class="ui-grid-a">
+		           <div class="ui-block-a" id="buttoncontainer">
+		               <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="d" data-corners="true" data-shadow="true" class="ui-btn ui-shadow 					ui-btn-corner-all ui-btn-up-d" id="closeFoodbtn">
+		                   Cancel
+		               </a>
+          
+		           </div>
+		           <div class="ui-block-b" id="buttoncontainer">
+		               <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="b" data-corners="true" data-shadow="true" class="ui-btn ui-shadow 					ui-btn-corner-all ui-btn-up-b" id="okFoodbtn">
+		                   OK
+					   </a>
+		
+          
+		           </div>
+			   </div>
+	
+	</div>
+
+
+       
+		
+		   <script>
+		$('#closeFoodbtn').closest('.ui-btn').hide();
+		$('#okFoodbtn').closest('.ui-btn').hide();
+
+		   </script>
+
+      
+	    </div>
 		
     </div><!-- /page one -->
 	

@@ -14,7 +14,7 @@
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 <script type="text/javascript" language="javascript" src="Chart.js"></script>
-<script type="text/javascript" src="taffy.js"></script>s
+<script type="text/javascript" src="taffy.js"></script>
 <script src="jquery.raty.min.js"></script>
  <script src="jquery.quovolver.js" type="text/javascript"></script>
  <script src="messi.js"></script>
@@ -30,14 +30,22 @@
         <div data-role="header">
             <h1>History</h1>
         </div>
-
+		<script>
+		
+	
+		$(document).bind('pageinit',function() {
+			
+			});
+		</script>
         <div data-role="content">
             <ul class="listview" data-inset="true" data-role="listview"
             data-theme="b" id="history-listview"></ul>
+			
         </div><!-- /content -->
 		<script>
-		 loadHistoryData();
+		loadHistoryData();
 		</script>
+		
     </div><!-- /page one -->
 	
 </body>
