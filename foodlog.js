@@ -6,7 +6,7 @@ mealDB.store("mealitems");
 localStorage.mealDBBackup=mealDB().stringify()	
 localStorage.foodDBBackup=foodDB().stringify()
 //var patt=/(?<=\()(.*?)(?=\))/;
-
+setInitalSettings();
 
 
 var dates=new Array();
@@ -445,4 +445,15 @@ function initDetailPage(){
 		}
 				
 	});
+}
+function setInitalSettings(){
+	if (localStorage.getItem("settingsset") === null) {
+	  	localStorage.setItem("settingsset", true);
+        localStorage.setItem("age",25);
+		localStorage.setItem("height",180);
+		localStorage.setItem("weight",76);
+		localStorage.setItem("gender","male");
+		localStorage.setItem("daily_limit",2500);
+		localStorage.setItem("meal_limit",500);
+	}
 }
