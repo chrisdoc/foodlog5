@@ -60,6 +60,7 @@ function loadFoodData(id,amount_eaten,key){
 
     
 	var canvas=document.getElementById("food_canvas");
+	canvas.width = canvas.width;
 	if(canvas!=null){
 		var myDoughnut = new Chart(document.getElementById("food_canvas").getContext("2d")).Doughnut(foodData);
 	}
