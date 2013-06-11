@@ -13,13 +13,22 @@ var dates=new Array();
 var date;
 
 
-function loadFoodData(id){
+function loadFoodData(id,amount_eaten){
 	var item=foodDB({id:id}).first();
 	console.log("show item "+id);
 	$('#food_header').text(item.name);
 	$('#food_name').text(item.name);
 	$('#food_group').text(item.grouo);
-	var kcal_text=item.amount+" "+item.unit+" has "+item.kcal+" kCal";
+	
+	var factor=amount_eaten/item.amount;
+
+	
+	$('#food_fat').html("Fat&nbsp;("+checkVariable(item.fat*factor)+"&nbsp;g)");
+	$('#food_sugar').html("Sugar&nbsp;("+checkVariable(item.sugar*factor)+"&nbsp;g)");
+	$('#food_df').html("Dietary&nbsp;fiber&nbsp;("+checkVariable(item.df*factor)+"&nbsp;g)");
+	$('#food_kh').html("Carbohydrates&nbsp;("+checkVariable(item.kh*factor)+"&nbsp;g)");
+	
+	var kcal_text=amount_eaten+" "+item.unit+" á "+item.kcal*factor+" kCal";
 	$('#food_amount_unit').text(kcal_text);
 	var thumbsrc= item.thumbsrc;
 	if(!thumbsrc){
@@ -30,19 +39,19 @@ function loadFoodData(id){
 
     var foodData = [
     {
-      value: Number(item.fat),
+      value: Number(checkVariable(item.fat)),
       color:"#F7464A"
     },
     {
-      value : Number(item.sugar),
+      value : Number(checkVariable(item.sugar)),
       color : "#46BFBD"
     },
     {
-      value : Number(item.df),
+      value : Number(checkVariable(item.df)),
       color : "#FDB45C"
     },
     {
-      value : Number(item.kh),
+      value : Number(checkVariable(item.kh)),
       color : "#949FB1"
     }
 
@@ -57,7 +66,15 @@ function loadFoodData(id){
 
 	//$('blockquote_food').quovolver();
 }
-
+function checkVariable(item){
+	return myRound((item<0||item=="")?"0":item,2);
+}
+function myRound(zahl,n){
+    var faktor;
+	zahl=Number(zahl);
+    faktor = Math.pow(10,n);
+    return(Math.round(zahl * faktor) / faktor);
+}
 function loadMealData(mealDate){
 	$('#meal-listview')
 		.empty();
@@ -82,7 +99,7 @@ function loadMealData(mealDate){
 					var date=new Date(record["date"]);
 					
 		            $('#meal-listview')
-		                .append('<li id="divider">' +'<a href="" onclick="displayFoodDetails('+id+');">' +'<img style="border-radius: 10px;" src="' + thumbsrc + '" class="ui-li-thumb">' +                   '<h3                class="ui-li-heading">' 							+name+'</h3>' + '<p class="ui-li-desc">'+date.toLocaleTimeString()+' '+amount_eaten+' '+unit+', '+total+ ' kCal</p>'  + '</a></li>');
+		                .append('<li id="divider">' +'<a href="" onclick="displayFoodDetails('+id+','+amount_eaten+');">' +'<img style="border-radius: 10px;" src="' + thumbsrc + '" class="ui-li-thumb">' +                   '<h3                class="ui-li-heading">' 							+name+'</h3>' + '<p class="ui-li-desc">'+date.toLocaleTimeString()+' '+amount_eaten+' '+unit+', '+total+ ' kCal</p>'  + '</a></li>');
 						
 		        });
 				
@@ -107,10 +124,10 @@ function displayMealDetails(meal){
    
 }
 
-function displayFoodDetails(id){
+function displayFoodDetails(id,amount){
     $.mobile.changePage( "foodDetail.php", {
       type: "get",
-      data: {foodid:id},
+      data: {foodid:id,amount:amount},
       changeHash: true
     });
 }
