@@ -107,7 +107,7 @@
 		</div>-->
 		
 		<div class="ui-grid-solo">
-			<div class="DivParent" style="height: 150px;">
+			<div class="DivParent" style="height: 150px;padding-right: 10%;margin-top: 3%;">
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
 						<div class="ui-block-a" style="margin-right: 3%;text-align: right;">
 							<canvas id="detail_canvas" height="150" width="150"></canvas>
@@ -152,7 +152,7 @@
 		</div>
 
 		<div class="ui-grid-solo">
-			<div class="DivParent"">
+			<div class="DivParent" style="margin-top: 3%;">
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
 						<div class="ui-block-a" style="text-align: right;padding-right: 2%;">
 							<div class="textmiddle">User rating: </div>
@@ -171,7 +171,7 @@
 			<div class="DivParent" style="margin-bottom: 1%;">
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
 						<div class="ui-block-a" style="text-align: right;padding-right: 2%;">
-							<div class="textmiddle">Amount in <?php echo $unit?>: </div>
+							<div class="textmiddle">Amount [<?php echo $unit?>]: </div>
 						</div>
 					</div>
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
@@ -205,16 +205,16 @@
 		
 		<div class="ui-grid-solo">
 			
-			<div class="ui-block-a" style="width: 50%; margin-left: 25%;">
+			<div class="ui-block-a" style="width: 100%;text-align: center;">
   		  <?php
 		  
 		  
 		 if($contents!=""){
 		  echo '
-		  <div class="panels" style="margin-left: 10%;">
+		  <div class="panels">
 		                      <div class="panel" id="panel-1">
 								  <div class="quotes">';
-  		  $quote='<blockquote>
+  		  $quote='<blockquote><meta name="viewport" content="width=device-width, initial-scale=1.5"/>
   			  			%s
 		  <cite>Anonymous</cite>
   			  		</blockquote>';
@@ -223,6 +223,7 @@
 			 
   		      echo sprintf($quote,$c);
   		  }
+
 		  echo '</div> </div> </div>';
   		 
   		  unset($c);
