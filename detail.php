@@ -68,20 +68,8 @@
 			</ul>
 		</div>
 		
-			<div class="ui-grid-solo">
-				<div>
-				<canvas id="detail_canvas" height="100" width="100"></canvas>
-				<ul>
-						        <li class="square fat"> <a class="nutrition">Fat&nbsp;(<?php echo $fat;?>g)</a> </li>
-						        <li class="square sugar"> <a class="nutrition">Sugar&nbsp;(<?php echo $sugar;?>g)</a> </li>
-						        <li class="square df"> <a class="nutrition">Dietary&nbsp;fiber&nbsp;(<?php echo $df;?>g)</a> </li>
-						        <li class="square carbon"> <a class="nutrition">Carbohydrates&nbsp;(<?php echo $kh;?>g)</a> </li>
-				</ul>
-				</div>
-			</div>
-		
 		<div class="ui-grid-a">
-            <!--<div class="ui-block-a" style="margin-top: 3%;margin-right: 3%;text-align: right;width: 40%;">
+            <div class="ui-block-a" style="margin-top: 3%;margin-right: 3%;text-align: right;width: 40%;">
             	<canvas id="detail_canvas" height="100" width="100"></canvas>
             </div>
             <div class="ui-block-b" style="margin-top: 3%;width: 50%;">
@@ -91,8 +79,8 @@
 						        <li class="square df"> <a class="nutrition">Dietary&nbsp;fiber&nbsp;(<?php echo $df;?>g)</a> </li>
 						        <li class="square carbon"> <a class="nutrition">Carbohydrates&nbsp;(<?php echo $kh;?>g)</a> </li>
 				</ul>
-            </div>-->
-	        <div class="ui-block-a" style="margin-top: 2%;">
+            </div>
+	        <div class="ui-block-a" style="margin-top: 1.6%;text-align: right;padding-right: 2%;">
 				<div class="textmiddle">User rating: </div>
 	        </div>
 	        <div class="ui-block-b" style="margin-top: 2%;">
