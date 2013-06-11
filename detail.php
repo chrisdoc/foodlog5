@@ -109,12 +109,12 @@
 		<div class="ui-grid-solo">
 			<div class="DivParent" style="height: 150px;">
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
-						<div class="ui-block-a" style="margin-top: 3%;margin-right: 3%;text-align: right;">
-							<canvas id="detail_canvas" height="100" width="100"></canvas>
+						<div class="ui-block-a" style="margin-right: 3%;text-align: right;">
+							<canvas id="detail_canvas" height="150" width="150"></canvas>
 						</div>
 					</div>
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
-						            <div class="ui-block-b" style="margin-top: 3%;width: 50%;">
+						            <div class="ui-block-b" style="width: 50%;">
 				<ul>
 						        <li class="square fat"> <a class="nutrition">Fat&nbsp;(<?php 
 									if($fat=="")
