@@ -5,6 +5,23 @@ div[class|=ui-block] {
     padding: 10px;
     vertical-align: middle;
     display: inline-block; }*/
+	
+.DivParent {
+    height: 40px;
+    white-space: nowrap;
+    text-align: center;
+}
+.DivWhichNeedToBeVerticallyAligned {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+}
+.DivHelper {
+    display: inline-block;
+    vertical-align: middle;
+    height:100%;
+}
+
 .square {
 	width: 10px;
 	height: 25px;
