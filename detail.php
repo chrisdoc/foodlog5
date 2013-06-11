@@ -200,13 +200,14 @@
 		 
 		 
 	</div><!-- /content -->
-	<div data-role="popup" id="popupAdded">
-	  <p>Meal was added to the diary<p>
+	<div data-role="popup" id="popupAdded" data-theme="g">
+		</br>
+	  <p style="padding-left:3em;padding-right:3em;text-align: center;">Meal was added to the diary<p>
+		  </br>
 	</div>
-	<div data-role="popup" id="popup_option" 
-	    data-theme="a" class="ui-corner-bottom ui-content" data-overlay-theme="a">
+	<div data-role="popup" id="popup_option" data-theme="a" class="ui-corner-bottom ui-content" data-overlay-theme="a">
 
-	     <div data-role="content">
+	     <div data-role="content" >
 	        <h3 class="ui-title">Limit exceeded!</h3>
 
 	        <p id="limit_text">You have exceeded your limits the ticket.</p>
