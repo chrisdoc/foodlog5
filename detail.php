@@ -69,6 +69,7 @@
 		</div>
 		
 			<div class="ui-grid-solo" style="text-align: center;">
+				<div>
 				<canvas id="detail_canvas" height="100" width="100"></canvas>
 				<ul>
 						        <li class="square fat"> <a class="nutrition">Fat&nbsp;(<?php echo $fat;?>g)</a> </li>
@@ -76,6 +77,7 @@
 						        <li class="square df"> <a class="nutrition">Dietary&nbsp;fiber&nbsp;(<?php echo $df;?>g)</a> </li>
 						        <li class="square carbon"> <a class="nutrition">Carbohydrates&nbsp;(<?php echo $kh;?>g)</a> </li>
 				</ul>
+				</div>
 			</div>
 		
 		<div class="ui-grid-a">
