@@ -86,7 +86,7 @@
 	        <div class="ui-block-b" style="margin-top: 2%;">
 	        	<div id="star"></div>
 	        </div>
-	        <div class="ui-block-a">
+	        <div class="ui-block-a" style="text-align: right;padding-right: 2%;margin-top: 1.3%">
 				<div class="textmiddle">Amount in <?php echo $unit?>: </div>
 	        </div>
 	        <div class="ui-block-b">
