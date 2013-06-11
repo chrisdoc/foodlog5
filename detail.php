@@ -152,7 +152,7 @@
 		</div>
 
 		<div class="ui-grid-solo">
-			<div class="DivParent"">
+			<div class="DivParent" style="margin-top: 3%;">
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
 						<div class="ui-block-a" style="text-align: right;padding-right: 2%;">
 							<div class="textmiddle">User rating: </div>
