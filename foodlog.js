@@ -19,7 +19,7 @@ function loadFoodData(id){
 	$('#food_header').text(item.name);
 	$('#food_name').text(item.name);
 	$('#food_group').text(item.grouo);
-	var kcal_text=item.amount+" "+item.unit+" has "+item.kcal+" kcal";
+	var kcal_text=item.amount+" "+item.unit+" has "+item.kcal+" kCal";
 	$('#food_amount_unit').text(kcal_text);
 	var thumbsrc= item.thumbsrc;
 	if(!thumbsrc){
@@ -181,7 +181,7 @@ function searchDB(data) {
 	$.ajax({
 		//http://localhost:8020/redirect?dest=http://fddb.info/api/v8/search/item.xml?lang=de&q=banane&apikey=HREPF3HUMKOUKKZTAK647
 		//url:"http://localhost:8020/redirect?dest=http://fddb.info/api/v8/search/item.xml?lang=de&q="+food+"&apikey=HREPF3	HUMKOUKKZTAK647",
-		url: "http://193.170.124.133/miniProxy.php/http://fddb.info/api/v8/search/item.xml?lang=de&q=" + food + "&apikey=HREPF3HUMKOUKKZTAK647", //"http://193.170.124.131/?method=search&param="+food,
+		url: "http://193.170.124.133/miniProxy.php/http://fddb.info/api/v8/search/item.xml?lang=en&q=" + food + "&apikey=HREPF3HUMKOUKKZTAK647", //"http://193.170.124.131/?method=search&param="+food,
 		type: "GET",
 		dataType: "xml",
 		success: function(xml) {
