@@ -107,7 +107,7 @@
 		</div>-->
 		
 		<div class="ui-grid-solo">
-			<div class="DivParent" height="150px" style="margin-bottom: 10%;">
+			<div class="DivParent" style="height: 150px;">
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
 						<div class="ui-block-a" style="margin-top: 3%;margin-right: 3%;text-align: right;">
 							<canvas id="detail_canvas" height="100" width="100"></canvas>
