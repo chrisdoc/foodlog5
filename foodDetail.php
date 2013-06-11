@@ -1,6 +1,7 @@
 <?php
 
 $id=$_GET["foodid"];
+$amount=$_GET["amount"];
 ?>
 
 <!DOCTYPE html> 
@@ -56,10 +57,10 @@ $id=$_GET["foodid"];
 				</div>
 	            <div class="ui-block-b">
 					<ul>
-							        <li class="square fat"> <a class="nutrition">fat</a> </li>
-							        <li class="square sugar"> <a class="nutrition">sugar</a> </li>
-							        <li class="square df"> <a class="nutrition">df</a> </li>
-							        <li class="square carbon"> <a class="nutrition">carbohydrates</a> </li>
+							        <li class="square fat"> <a class="nutrition" id="food_fat">Fat</a> </li>
+							        <li class="square sugar"> <a class="nutrition" id="food_sugar">Sugar</a> </li>
+							        <li class="square df"> <a class="nutrition" id="food_df">Dietary&nbsp;fiber&nbsp;</a> </li>
+							        <li class="square carbon"> <a class="nutrition" id="food_kh">Carbohydrates</a> </li>
 					</ul>
 	            </div>
 		        <div class="ui-block-a">
@@ -75,7 +76,7 @@ $id=$_GET["foodid"];
 			<script>
 		$(document).bind('pageinit',function() {
       
-				loadFoodData(<?php echo $id;?>);
+				loadFoodData(<?php echo $id.",".$amount;?>);
 			});
 			
 	  	
