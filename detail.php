@@ -108,11 +108,15 @@
 		
 		<div class="ui-grid-solo">
 			<div class="DivParent">
-					<div class="DivWhichNeedToBeVerticallyAligned">
-						<div class="textmiddle">User rating: </div>
+					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
+						<div class="ui-block-a" style="margin-top: 1.6%;text-align: right;padding-right: 2%;">
+							<div class="textmiddle">User rating: </div>
+						</div>
 					</div>
-					<div class="DivWhichNeedToBeVerticallyAligned">
-						<div id="star"></div>
+					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
+						<div class="ui-block-b" style="margin-top: 2%;">
+							<div id="star"></div>
+						</div>
 					</div>
 				<div class="DivHelper"></div>
 			</div>
@@ -120,12 +124,12 @@
 		
 		<div class="ui-grid-solo">
 			<div class="DivParent">
-					<div class="DivWhichNeedToBeVerticallyAligned">
+					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
 						<div class="ui-block-a" style="text-align: right;padding-right: 2%;margin-top: 2.5%;">
 							<div class="textmiddle">Amount in <?php echo $unit?>: </div>
 						</div>
 					</div>
-					<div class="DivWhichNeedToBeVerticallyAligned">
+					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
 						<div class="ui-block-b" style="margin-top: 1%;">
 							<input type="number" id="amount" name="amount" min="1" max="3000" value=<?php echo '"'.$amount.'"';?>>
 						</div>
@@ -136,11 +140,15 @@
 		
 		<div class="ui-grid-solo">
 			<div class="DivParent">
-					<div class="DivWhichNeedToBeVerticallyAligned">
-						<div class="textmiddle">Time: </div>
+					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
+						<div class="ui-block-a" style="text-align: right;padding-right: 2%;margin-top: 2.5%;">
+							<div class="textmiddle">Time: </div>
+						</div>
 					</div>
-					<div class="DivWhichNeedToBeVerticallyAligned">
-						<input id="time" name="time" type="time"/>
+					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
+						<div class="ui-block-b" style="margin-top: 1%;">
+							<input id="time" name="time" type="time"/>
+						</div>
 					</div>
 				<div class="DivHelper"></div>
 			</div>
