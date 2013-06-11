@@ -126,7 +126,7 @@
 						</div>
 					</div>
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
-						<div class="ui-block-b" style="margin-top: 2%;width: 90%;">
+						<div class="ui-block-b" style="margin-top: 2%;width: 87%;">
 							<div id="star"></div>
 						</div>
 					</div>
@@ -137,13 +137,13 @@
 		<div class="ui-grid-solo">
 			<div class="DivParent" style="margin-bottom: 1%;">
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
-						<div class="ui-block-a" style="text-align: right;padding-right: 2%;<!--margin-top: 2.5%;-->">
+						<div class="ui-block-a" style="text-align: right;padding-right: 2%;">
 							<div class="textmiddle">Amount in <?php echo $unit?>: </div>
 						</div>
 					</div>
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
-						<div class="ui-block-b" style="margin-top: 1%;width: 90%;">
-							<input type="number" id="amount" name="amount" min="1" max="3000" value=<?php echo '"'.$amount.'"';?>>
+						<div class="ui-block-b" style="margin-top: 1%;width: 87%;">
+							<input type="number" id="amount" name="amount" min="1" max="3000" style="text-align: center;" value=<?php echo '"'.$amount.'"';?>>
 						</div>
 					</div>
 				<div class="DivHelper"></div>
@@ -153,13 +153,13 @@
 		<div class="ui-grid-solo">
 			<div class="DivParent" style="margin-bottom: 3%;">
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
-						<div class="ui-block-a" style="text-align: right;padding-right: 2%;<!--margin-top: 2.5%;-->">
+						<div class="ui-block-a" style="text-align: right;padding-right: 2%;">
 							<div class="textmiddle">Time: </div>
 						</div>
 					</div>
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
-						<div class="ui-block-b" style="margin-top: 1%;width: 90%;">
-							<input id="time" name="time" type="time"/>
+						<div class="ui-block-b" style="margin-top: 1%;width: 87%;">
+							<input id="time" name="time" type="time" style="text-align: center;"/>
 						</div>
 					</div>
 				<div class="DivHelper"></div>
@@ -167,7 +167,7 @@
 		</div>
 		
 		<div class="ui-grid-solo">
-			<div class="ui-block-a" style="width: 90%; margin-left: 5%;"><button type="v" data-theme="b" id="add_meal">Add meal</button></div>
+			<div class="ui-block-a" style="width: 90%; margin-left: 5%;margin-top: 2%"><button type="v" data-theme="b" id="add_meal">Add meal</button></div>
 		</div>
 		
 		<div class="ui-grid-solo">
