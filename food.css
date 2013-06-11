@@ -80,7 +80,7 @@ a.nutrition {
 		
 blockquote {
 font-family: Georgia, serif;
-font-size: 18px;
+font-size: 1.2em;
 font-style: italic;
 margin: 0.25em 0;
 padding: 0.25em 40px;
@@ -91,7 +91,7 @@ color: #383838;
 blockquote:before {
 display: block;
 content: "\201C";
-font-size: 80px;
+font-size: 3em;
 position: absolute;
 left: -20px;
 top: -20px;
