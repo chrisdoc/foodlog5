@@ -45,7 +45,7 @@
 <div data-role="page" id="detail">
 
 	<div data-role="header">
-		<h1><?php echo $name;?></h1>
+		<h1><?php echo 'Product details'//$name;?></h1>
 	</div>
 	
 	<div data-role="content" >	
@@ -58,10 +58,10 @@
 		</div>
 		
 		<div class="ui-grid-solo" style="text-align: center;">
-			<?php echo '<img class="foodimg" src="'.$thumbsrc.'" alt="Smiley face" style="width: 30%; height: auto; border-top-left-radius: 14px;border-top-right-radius: 14px;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">'; ?>
+			<?php echo '<img class="foodimg" src="'.$thumbsrc.'" alt="Smiley face" style="width: 40%; height: auto; border-top-left-radius: 14px;border-top-right-radius: 14px;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">'; ?>
 		</div>
 		
-		<div class="ui-grid-solo" style="text-align: center;margin-top: 2%;">
+		<div class="ui-grid-solo" style="text-align: center;margin-top: 1%;">
 			<ul >
 						        <li> <div class="textmiddle" style="font-style: oblique;"><?php echo $group;?></div> </li>
 								 <li> <div class="textmiddle"><?php echo $amount." ".$unit." has ".$kcal." kCal";?></div> </li>
@@ -69,27 +69,15 @@
 		</div>
 		
 		<div class="ui-grid-a">
-            <!--<div class="ui-block-a" style="text-align: center;width: 100%;">
-            	<?php echo '<img class="foodimg" src="'.$thumbsrc.'" alt="Smiley face" style="width: 30%; height: auto; border-top-left-radius: 14px;border-top-right-radius: 14px;border-bottom-right-radius: 14px;border-bottom-left-radius: 14px;">'; ?>
-            </div>
-            <div class="ui-block-b">
-				<ul  style="margin-left:20px;">
-						        <li> <div class="textlarge"><?php echo $name;?></div> </li>
-								<li></li>
-						        <li> <div class="textmiddle"><?php echo $group;?></div> </li>
-								 <li> <div class="textmiddle"><?php echo $amount." ".$unit." has ".$kcal." kCal";?></div> </li>
-				</ul>
-            </div>-->
-			
             <div class="ui-block-a" style="margin-top: 3%;padding-left: 30%;">
             	<canvas id="detail_canvas" style="height: 100%; width: 100%;"></canvas>
             </div>
             <div class="ui-block-b" style="margin-top: 3%;">
 				<ul>
-						        <li class="square fat"> <a class="nutrition">fat&nbsp;(<?php echo $fat;?>g)</a> </li>
-						        <li class="square sugar"> <a class="nutrition">sugar&nbsp;(<?php echo $sugar;?>g)</a> </li>
-						        <li class="square df"> <a class="nutrition">dietary&nbsp;fiber&nbsp;(<?php echo $df;?>g)</a> </li>
-						        <li class="square carbon"> <a class="nutrition">carbohydrates&nbsp;(<?php echo $kh;?>g)</a> </li>
+						        <li class="square fat"> <a class="nutrition">Fat&nbsp;(<?php echo $fat;?>g)</a> </li>
+						        <li class="square sugar"> <a class="nutrition">Sugar&nbsp;(<?php echo $sugar;?>g)</a> </li>
+						        <li class="square df"> <a class="nutrition">Dietary&nbsp;fiber&nbsp;(<?php echo $df;?>g)</a> </li>
+						        <li class="square carbon"> <a class="nutrition">Carbohydrates&nbsp;(<?php echo $kh;?>g)</a> </li>
 				</ul>
             </div>
 	        <div class="ui-block-a" style="margin-top: 2%;">
