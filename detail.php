@@ -171,7 +171,7 @@
 			<div class="DivParent" style="margin-bottom: 1%;">
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
 						<div class="ui-block-a" style="text-align: right;padding-right: 2%;">
-							<div class="textmiddle">Amount in <?php echo $unit?>: </div>
+							<div class="textmiddle">Amount [<?php echo $unit?>]: </div>
 						</div>
 					</div>
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
@@ -205,13 +205,13 @@
 		
 		<div class="ui-grid-solo">
 			
-			<div class="ui-block-a" style="width: 50%; margin-left: 25%;">
+			<div class="ui-block-a" style="width: 50%; margin-left: 25%;text-align: center;">
   		  <?php
 		  
 		  
 		 if($contents!=""){
 		  echo '
-		  <div class="panels" style="margin-left: 10%;">
+		  <div class="panels">
 		                      <div class="panel" id="panel-1">
 								  <div class="quotes">';
   		  $quote='<blockquote>
