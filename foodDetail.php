@@ -3,6 +3,17 @@
 $id=$_GET["foodid"];
 $amount=$_GET["amount"];
 $key=$_GET["key"];
+$name=$_GET["name"];
+$id=$_GET["id"];
+$thumbsrc=$_GET["thumbsrc"];
+$fat=floatVal($_GET["fat"]);
+$sugar=floatVal($_GET["sugar"]);
+$df=floatVal($_GET["df"]);
+$kh=floatVal($_GET["kh"]);
+$kcal=floatVal($_GET["kcal"]);
+$amount=$_GET["amount"];
+$unit=$_GET["unit"];
+$group=$_GET["group"];
 ?>
 
 <!DOCTYPE html> 
@@ -83,10 +94,33 @@ $key=$_GET["key"];
 		
 		
 			<script>
-		$(document).bind('pageinit',function() {
+			$(document).bind('pageinit',function() {
       
 				loadFoodData(<?php echo $id.",".$amount.",".$key; ?>);
 			});
+		    var doughnutData = [
+		    {
+		      value: Number(checkVariable(<?php echo $fat;?>)),
+		      color:"#F7464A"
+		    },
+		    {
+		      value : Number(checkVariable(<?php echo $sugar;?>)),
+		      color : "#46BFBD"
+		    },
+		    {
+		      value : Number(checkVariable(<?php echo $df;?>)),
+		      color : "#FDB45C"
+		    },
+		    {
+		      value : Number(checkVariable(<?php echo $kh;?>)),
+		      color : "#949FB1"
+		    }
+
+		    ];
+
+		   
+			var myDoughnut = new Chart(document.getElementById("food_canvas").getContext("2d")).Doughnut(doughnutData);
+			
 			
 	  	
 			  </script>

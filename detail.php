@@ -1,4 +1,3 @@
-
 <?php
   $name=$_GET["name"];
   $id=$_GET["id"];
@@ -330,7 +329,7 @@
 	           </div>
 		   </div>
 	
-</div><!-- /page one -->
+</div>
 
 
        

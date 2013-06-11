@@ -59,11 +59,11 @@ function loadFoodData(id,amount_eaten,key){
     ];
 
     
-	var canvas=document.getElementById("food_canvas");
+	/*var canvas=document.getElementById("food_canvas");
 	canvas.width = canvas.width;
 	if(canvas!=null){
 		var myDoughnut = new Chart(document.getElementById("food_canvas").getContext("2d")).Doughnut(foodData);
-	}
+	}*/
   	$('#food_star').raty({ readOnly: true,score: item.rank/2.0});
 
 	$('#delete_meal').unbind();
@@ -77,8 +77,8 @@ function loadFoodData(id,amount_eaten,key){
 		$('#okFoodbtn').click(function(){
 			console.log("item deleted");
 			mealDB({key:key}).remove();
-			$("#popupDeleted").popup("open");
-			window.setTimeout(function() {$('#popupDeleted').popup("close")}, 2000);
+			//$("#popupDeleted").popup("open");
+			//window.setTimeout(function() {$('#popupDeleted').popup("close")}, 2000);
 			//history.back();
 			//history.go(-1);
 			/*
@@ -157,9 +157,24 @@ function displayMealDetails(meal){
 }
 
 function displayFoodDetails(id,amount,key){
+	var item=foodDB({id:id}).first();
+	/*$id=$_GET["foodid"];
+	$amount=$_GET["amount"];
+	$key=$_GET["key"];
+	$name=$_GET["name"];
+	$id=$_GET["id"];
+	$thumbsrc=$_GET["thumbsrc"];
+	$fat=floatVal($_GET["fat"]);
+	$sugar=floatVal($_GET["sugar"]);
+	$df=floatVal($_GET["df"]);
+	$kh=floatVal($_GET["kh"]);
+	$kcal=floatVal($_GET["kcal"]);
+	$amount=$_GET["amount"];
+	$unit=$_GET["unit"];
+	$group=$_GET["group"];*/
     $.mobile.changePage( "foodDetail.php", {
       type: "get",
-      data: {foodid:id,amount:amount,key:key},
+      data: {foodid:id,amount:amount,key:key,id:item.id,name:item.name,thumbsrc:item.thumbsrc,fat:item.fat,sugar:item.sugar,df:item.df,kh:item.kh,kcal:item.kcal,unit:item.unit,group:item.grouo},
       changeHash: true
     });
 }
