@@ -396,6 +396,7 @@ function initDetailPage(){
 	//	$('#popup_option').popup();
 	//	$("#popupAdded").popup();
        }, 300);
+	$('#add_meal').unbind();
 	$("#add_meal").click(function() {
 		var amount = parseInt($('#amount').val());
 		//var id=<?php echo $id;?>;
@@ -442,7 +443,7 @@ function initDetailPage(){
 			console.log("added to history");
 			console.log({date:d.toJSON(),id:id,amount:amount})
 			$("#popupAdded").popup("open");
-			window.setTimeout(function() {$('#popupAdded').popup("close")}, 1000);
+			window.setTimeout(function() {$('#popupAdded').popup("close")}, 2000);
 			
 		}
 				
