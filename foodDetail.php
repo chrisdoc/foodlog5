@@ -93,7 +93,11 @@ $key=$_GET["key"];
 		 
 		 
 		</div><!-- /content -->
-		
+		<div data-role="popup" id="popupDeleted" data-theme="g">
+			</br>
+		  <p style="padding-left:3em;padding-right:3em;text-align: center;">Meal was deleted from the diary<p>
+			  </br>
+		</div>
 		<div data-role="popup" id="popup_delete" data-theme="a" class="ui-corner-bottom ui-content" data-overlay-theme="a">
 
 		     <div data-role="content" >

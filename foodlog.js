@@ -76,6 +76,8 @@ function loadFoodData(id,amount_eaten,key){
 		$('#okFoodbtn').click(function(){
 			console.log("item deleted");
 			mealDB({key:key}).remove();
+			$("#popupDeleted").popup("open");
+			window.setTimeout(function() {$('#popupDeleted').popup("close")}, 2000);
 			//history.back();
 			//history.go(-1);
 			/*
