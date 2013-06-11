@@ -205,7 +205,7 @@ function loadHistoryData(){
         var dateString=date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear();
         var jsonDate=date.toJSON();
         $('#history-listview')
-            .append('<li id="divider">' + '<a href="" onclick="displayMealDetails('+i+');">'  +                   '<h3                class="ui-li-heading">' +dateString+'</h3>' + '<p class="ui-li-desc"> You have consumed ' +totalKCal+ ' kCal</p>' + '</a>' + '</li>');
+            .append('<li id="divider">' + '<a href="" onclick="displayMealDetails('+i+');">'  +                   '<h3                class="ui-li-heading">' +dateString+'</h3>' + '<p class="ui-li-desc"> You have consumed ' +totalKCal.toFixed(2) + ' kCal</p>' + '</a>' + '</li>');
 			i++;
 		});
 		$('history-listview').listview('refresh');
