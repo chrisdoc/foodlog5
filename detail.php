@@ -13,7 +13,7 @@
   $group=$_GET["group"];
   $rank=floatVal($_GET["rank"]);
   $contents=$_GET["contents"];
-  $content=explode("#", urldecode($contents));
+  $content=explode("#", $contents);
 ?>
 
 
@@ -81,7 +81,13 @@
 										echo '0';
 									else
 										echo $fat;?>g)</a> </li>
-						        <li class="square sugar"> <a class="nutrition">Sugar&nbsp;(<?php echo $sugar;?>g)</a> </li>
+						        <li class="square sugar"> <a class="nutrition">Sugar&nbsp;(<?php 
+									if($sugar=="")
+										echo '0';
+									else if($sugar<0)
+										echo '0';
+									else
+										echo $sugar;?>g)</a> </li>
 						        <li class="square df"> <a class="nutrition">Dietary&nbsp;fiber&nbsp;(<?php 
 									if($df=="")
 										echo '0';
@@ -89,7 +95,13 @@
 										echo '0';
 									else
 										echo $df;?>g)</a> </li>
-						        <li class="square carbon"> <a class="nutrition">Carbohydrates&nbsp;(<?php echo $kh;?>g)</a> </li>
+						        <li class="square carbon"> <a class="nutrition">Carbohydrates&nbsp;(<?php 
+									if($kh=="")
+										echo '0';
+									else if($kh<0)
+										echo '0';
+									else
+										echo $kh;?>g)</a> </li>
 				</ul>
             </div>
 	        <!--<div class="ui-block-a" style="margin-top: 1.6%;text-align: right;padding-right: 2%;">
@@ -162,6 +174,9 @@
 			
 			<div class="ui-block-a" style="width: 50%; margin-left: 25%;">
   		  <?php
+		  
+		  
+		 if($contents!=""){
 		  echo '
 		  <div class="panels" style="margin-left: 10%;">
 		                      <div class="panel" id="panel-1">
@@ -178,7 +193,8 @@
 		  echo '</div> </div> </div>';
   		 
   		  unset($c);
-		  
+	  
+	  }
   		  ?>
 			</div>
 		</div>
