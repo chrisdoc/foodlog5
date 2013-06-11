@@ -205,7 +205,7 @@
 		
 		<div class="ui-grid-solo">
 			
-			<div class="ui-block-a" style="width: 50%; margin-left: 25%;text-align: center;">
+			<div class="ui-block-a" style="width: 100%;text-align: center;">
   		  <?php
 		  
 		  
@@ -214,7 +214,7 @@
 		  <div class="panels">
 		                      <div class="panel" id="panel-1">
 								  <div class="quotes">';
-  		  $quote='<blockquote>
+  		  $quote='<blockquote><meta name="viewport" content="width=device-width"/>
   			  			%s
 		  <cite>Anonymous</cite>
   			  		</blockquote>';
@@ -223,8 +223,7 @@
 			 
   		      echo sprintf($quote,$c);
   		  }
-		  
-		  echo '<meta name="viewport" content="width=device-width"/>';
+
 		  echo '</div> </div> </div>';
   		 
   		  unset($c);
