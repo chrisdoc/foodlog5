@@ -86,10 +86,10 @@
 	        <div class="ui-block-b" style="margin-top: 2%;">
 	        	<div id="star"></div>
 	        </div>
-	        <div class="ui-block-a" style="text-align: right;padding-right: 2%;margin-top: 1.3%">
+	        <div class="ui-block-a" style="text-align: right;padding-right: 2%;margin-top: 2.5%;">
 				<div class="textmiddle">Amount in <?php echo $unit?>: </div>
 	        </div>
-	        <div class="ui-block-b">
+	        <div class="ui-block-b" style="margin-top: 1%;">
 	        	<input type="number" id="amount" name="amount" min="1" max="3000" value=<?php echo '"'.$amount.'"';?>>
 	        </div>
 	        <div class="ui-block-a">
