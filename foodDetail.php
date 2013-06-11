@@ -37,33 +37,7 @@ $key=$_GET["key"];
         </div>
 
   	  	
-		<div data-role="content" >	
-			<!--<div class="ui-grid-a">
-	            <div class="ui-block-a">
-	            	<img id="food_img" class="foodimg" alt="">
-	            </div>
-	            <div class="ui-block-b">
-					<ul  style="margin-left:20px;">
-							        <li> <div class="textlarge" id="food_name"></div> </li>
-									<li></li>
-							        <li> <div class="textmiddle" id="food_group"></div> </li>
-									 <li> <div class="textmiddle" id="food_amount_unit"></div> </li>
-					</ul>
-	            </div>
-			
-	            <!--<div class="ui-block-a" style="margin-top: 3%;padding-left: 30%;">
-					<canvas id="food_canvas" style="height: 100%; width: 100%;"></canvas>
-				</div>
-	            <div class="ui-block-b">
-					<ul>
-							        <li class="square fat"> <a class="nutrition" id="food_fat">Fat</a> </li>
-							        <li class="square sugar"> <a class="nutrition" id="food_sugar">Sugar</a> </li>
-							        <li class="square df"> <a class="nutrition" id="food_df">Dietary&nbsp;fiber&nbsp;</a> </li>
-							        <li class="square carbon"> <a class="nutrition" id="food_kh">Carbohydrates</a> </li>
-					</ul>
-	            </div>	
-			</div>-->
-			
+		<div data-role="content" >				
 			<div class="ui-grid-solo" style="text-align: center;margin-top: 2%;">
 				<ul >
 					<li> <div class="textlarge" id="food_name" style="font-weight: bold;"></div> </li>
