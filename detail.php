@@ -69,10 +69,10 @@
 		</div>
 		
 		<div class="ui-grid-a">
-            <div class="ui-block-a" style="margin-top: 3%;padding-left: 0%;text-align: center;width: 85%;">
+            <div class="ui-block-a" style="margin-top: 3%;padding-left: 0%;text-align: left;width: 85%;">
             	<canvas id="detail_canvas" style="height: 100%; width: 100%;"></canvas>
             </div>
-            <div class="ui-block-b" style="margin-top: 3%;width: 20%;margin-left: -35%;">
+            <div class="ui-block-b" style="margin-top: 3%;width: 20%;margin-left: -38%;">
 				<ul>
 						        <li class="square fat"> <a class="nutrition">Fat&nbsp;(<?php echo $fat;?>g)</a> </li>
 						        <li class="square sugar"> <a class="nutrition">Sugar&nbsp;(<?php echo $sugar;?>g)</a> </li>
