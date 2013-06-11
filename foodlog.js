@@ -377,10 +377,15 @@ updateKcal=function(){
 function initDetailPage(){
  	var d = new Date();
 	var ds=d.getHours()+":"+d.getUTCMinutes();
+	var minutes=d.getUTCMinutes();
+	var hours=d.getHours();
 	if(d.getUTCMinutes()<10){
-		var ds=d.getHours()+":0"+d.getUTCMinutes();
+		minutes="0"+d.getUTCMinutes();
 	}
-	
+	if(d.getHours()<10){
+		hours="0"+d.getHours();
+	}
+	var ds=hours+":"+minutes;
 	
 	console.log("timestring: "+ds);
 	$('#time').val(ds);
@@ -410,7 +415,8 @@ function initDetailPage(){
 								$('#closebtn').closest('.ui-btn').show();
 								$('#okbtn').closest('.ui-btn').show();
 								$('#okbtn').click(function(){
-									console.log({date:d.toJSON(),id:id,amount:amount})
+									console.log({date:d.toJSON(),id:id,amount:amount});
+									console.log("added to history");
 									mealDB.insert({date:d.toJSON(),id:id,amount:amount});
 									$( '#popup_option' ).popup( 'close', { transition: "flow" } );
 								});
@@ -422,14 +428,17 @@ function initDetailPage(){
 								$('#closebtn').closest('.ui-btn').show();
 								$('#okbtn').closest('.ui-btn').show();
 								$('#okbtn').click(function(){
-									console.log({date:d.toJSON(),id:id,amount:amount})
+									console.log("added to history");
+									console.log({date:d.toJSON(),id:id,amount:amount});
 									mealDB.insert({date:d.toJSON(),id:id,amount:amount});
 									$( '#popup_option' ).popup( 'close', { transition: "flow" } );
 								});
 			                    $( '#popup_option' ).popup( 'open', { transition: "flow" } );
 		}
-		else if(kCal < localStorage.meal_limit && (todaysKcal + kcal) < localStorage.daily_limit){
+		else if(kcal < localStorage.meal_limit && (todaysKcal + kcal) < localStorage.daily_limit){
 			mealDB.insert({date:d.toJSON(),id:id,amount:amount});
+			console.log("added to history");
+			console.log({date:d.toJSON(),id:id,amount:amount})
 			$("#popupAdded").popup("open");
 			window.setTimeout(function() {$('#popupAdded').popup("close")}, 1000);
 			
