@@ -377,10 +377,15 @@ updateKcal=function(){
 function initDetailPage(){
  	var d = new Date();
 	var ds=d.getHours()+":"+d.getUTCMinutes();
+	var minutes=d.getUTCMinutes();
+	var hours=d.getHours();
 	if(d.getUTCMinutes()<10){
-		var ds=d.getHours()+":0"+d.getUTCMinutes();
+		minutes="0"+d.getUTCMinutes();
 	}
-	
+	if(d.getHours()<10){
+		hours="0"+d.getHours();
+	}
+	var ds=hours+":"+minutes;
 	
 	console.log("timestring: "+ds);
 	$('#time').val(ds);
