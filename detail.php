@@ -126,7 +126,7 @@
 						</div>
 					</div>
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
-						<div class="ui-block-b" style="margin-top: 2%;width: 87%;">
+						<div class="ui-block-b" style="margin-top: 2%;width: 84%;">
 							<div id="star"></div>
 						</div>
 					</div>
@@ -142,7 +142,7 @@
 						</div>
 					</div>
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
-						<div class="ui-block-b" style="margin-top: 1%;width: 87%;">
+						<div class="ui-block-b" style="margin-top: 1%;width: 84%;">
 							<input type="number" id="amount" name="amount" min="1" max="3000" style="text-align: center;" value=<?php echo '"'.$amount.'"';?>>
 						</div>
 					</div>
@@ -158,7 +158,7 @@
 						</div>
 					</div>
 					<div class="DivWhichNeedToBeVerticallyAligned" style="width: 50%;">
-						<div class="ui-block-b" style="margin-top: 1%;width: 87%;">
+						<div class="ui-block-b" style="margin-top: 1%;width: 84%;">
 							<input id="time" name="time" type="time" style="text-align: center;"/>
 						</div>
 					</div>
@@ -167,7 +167,7 @@
 		</div>
 		
 		<div class="ui-grid-solo">
-			<div class="ui-block-a" style="width: 90%; margin-left: 5%;margin-top: 2%"><button type="v" data-theme="b" id="add_meal">Add meal</button></div>
+			<div class="ui-block-a" style="width: 90%; margin-left: 5%;margin-top: 3%"><button type="v" data-theme="b" id="add_meal">Add meal</button></div>
 		</div>
 		
 		<div class="ui-grid-solo">
